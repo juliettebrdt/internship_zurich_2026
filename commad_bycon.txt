@@ -1,0 +1,2376 @@
+Last login: Fri Feb 20 15:43:44 on ttys001
+bgadmin@Baudisgroups-MacBook-Air ~ % cd ~/GitHub/
+
+bgadmin@Baudisgroups-MacBook-Air GitHub % gh repo clone progenetix/bycon
+
+fatal: destination path 'bycon' already exists and is not an empty directory.
+failed to run git: exit status 128
+bgadmin@Baudisgroups-MacBook-Air GitHub % git pull
+
+fatal: not a git repository (or any of the parent directories): .git
+bgadmin@Baudisgroups-MacBook-Air GitHub % cd ~/Github/bycon/
+
+bgadmin@Baudisgroups-MacBook-Air bycon % git pull
+
+Already up to date.
+bgadmin@Baudisgroups-MacBook-Air bycon % chmod 755 *.sh
+
+bgadmin@Baudisgroups-MacBook-Air bycon % chmod 755 *.py
+
+bgadmin@Baudisgroups-MacBook-Air bycon % ./updev.sh
+
+Found existing installation: bycon 2.7.4
+Uninstalling bycon-2.7.4:
+  Would remove:
+    /opt/homebrew/lib/python3.13/site-packages/bycon-2.7.4.dist-info/*
+    /opt/homebrew/lib/python3.13/site-packages/bycon/*
+    /opt/homebrew/lib/python3.13/site-packages/byconServices/*
+Proceed (Y/n)? n
+* Getting build dependencies for sdist...
+running egg_info
+creating bycon.egg-info
+writing bycon.egg-info/PKG-INFO
+writing dependency_links to bycon.egg-info/dependency_links.txt
+writing requirements to bycon.egg-info/requires.txt
+writing top-level names to bycon.egg-info/top_level.txt
+writing manifest file 'bycon.egg-info/SOURCES.txt'
+reading manifest file 'bycon.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file 'bycon.egg-info/SOURCES.txt'
+* Building sdist...
+running sdist
+running egg_info
+writing bycon.egg-info/PKG-INFO
+writing dependency_links to bycon.egg-info/dependency_links.txt
+writing requirements to bycon.egg-info/requires.txt
+writing top-level names to bycon.egg-info/top_level.txt
+reading manifest file 'bycon.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file 'bycon.egg-info/SOURCES.txt'
+running check
+creating bycon-2.7.4
+creating bycon-2.7.4/bycon
+creating bycon-2.7.4/bycon/byconServiceLibs
+creating bycon-2.7.4/bycon/config
+creating bycon-2.7.4/bycon/lib
+creating bycon-2.7.4/bycon/rsrc
+creating bycon-2.7.4/bycon/rsrc/genomes/grch38
+creating bycon-2.7.4/bycon/rsrc/genomes/hg16
+creating bycon-2.7.4/bycon/rsrc/genomes/hg17
+creating bycon-2.7.4/bycon/rsrc/genomes/hg18
+creating bycon-2.7.4/bycon/rsrc/genomes/hg19
+creating bycon-2.7.4/bycon/rsrc/genomes/mSarHar1.11
+creating bycon-2.7.4/bycon/rsrc/genomes/mm8
+creating bycon-2.7.4/bycon/rsrc/genomes/mm9
+creating bycon-2.7.4/bycon/rsrc/genomes/zf7
+creating bycon-2.7.4/bycon/schemas
+creating bycon-2.7.4/bycon/schemas/framework
+creating bycon-2.7.4/bycon/schemas/framework/common
+creating bycon-2.7.4/bycon/schemas/framework/configuration
+creating bycon-2.7.4/bycon/schemas/framework/requests
+creating bycon-2.7.4/bycon/schemas/framework/responses
+creating bycon-2.7.4/bycon/schemas/framework/responses/examples-sections
+creating bycon-2.7.4/bycon/schemas/framework/responses/sections
+creating bycon-2.7.4/bycon/schemas/models
+creating bycon-2.7.4/bycon/schemas/models/bycon-database-schemas
+creating bycon-2.7.4/bycon/schemas/models/bycon-model
+creating bycon-2.7.4/bycon/schemas/models/bycon-model/common
+creating bycon-2.7.4/bycon/schemas/models/bycon-service-schemas
+creating bycon-2.7.4/bycon/schemas/vrs
+creating bycon-2.7.4/byconServices
+creating bycon-2.7.4/bycon.egg-info
+copying files to bycon-2.7.4...
+copying LICENSE -> bycon-2.7.4
+copying README.md -> bycon-2.7.4
+copying pyproject.toml -> bycon-2.7.4
+copying ./bycon/__init__.py -> bycon-2.7.4/./bycon
+copying ./bycon/config.py -> bycon-2.7.4/./bycon
+copying ./bycon/byconServiceLibs/__init__.py -> bycon-2.7.4/./bycon/byconServiceLibs
+copying ./bycon/byconServiceLibs/bycon_bundler.py -> bycon-2.7.4/./bycon/byconServiceLibs
+copying ./bycon/byconServiceLibs/bycon_cluster.py -> bycon-2.7.4/./bycon/byconServiceLibs
+copying ./bycon/byconServiceLibs/bycon_importer.py -> bycon-2.7.4/./bycon/byconServiceLibs
+copying ./bycon/byconServiceLibs/bycon_plot.py -> bycon-2.7.4/./bycon/byconServiceLibs
+copying ./bycon/byconServiceLibs/collation_utils.py -> bycon-2.7.4/./bycon/byconServiceLibs
+copying ./bycon/byconServiceLibs/cytoband_utils.py -> bycon-2.7.4/./bycon/byconServiceLibs
+copying ./bycon/byconServiceLibs/datatable_utils.py -> bycon-2.7.4/./bycon/byconServiceLibs
+copying ./bycon/byconServiceLibs/export_file_generation.py -> bycon-2.7.4/./bycon/byconServiceLibs
+copying ./bycon/byconServiceLibs/file_utils.py -> bycon-2.7.4/./bycon/byconServiceLibs
+copying ./bycon/byconServiceLibs/geoloc_utils.py -> bycon-2.7.4/./bycon/byconServiceLibs
+copying ./bycon/byconServiceLibs/ontology_utils.py -> bycon-2.7.4/./bycon/byconServiceLibs
+copying ./bycon/byconServiceLibs/service_helpers.py -> bycon-2.7.4/./bycon/byconServiceLibs
+copying ./bycon/byconServiceLibs/service_response_generation.py -> bycon-2.7.4/./bycon/byconServiceLibs
+copying ./bycon/config/aggregation_terms.yaml -> bycon-2.7.4/./bycon/config
+copying ./bycon/config/argument_definitions.yaml -> bycon-2.7.4/./bycon/config
+copying ./bycon/config/beacon_configuration.yaml -> bycon-2.7.4/./bycon/config
+copying ./bycon/config/beacon_map.yaml -> bycon-2.7.4/./bycon/config
+copying ./bycon/config/dataset_definitions.yaml -> bycon-2.7.4/./bycon/config
+copying ./bycon/config/datatable_mappings.yaml -> bycon-2.7.4/./bycon/config
+copying ./bycon/config/filter_definitions.yaml -> bycon-2.7.4/./bycon/config
+copying ./bycon/config/handover_definitions.yaml -> bycon-2.7.4/./bycon/config
+copying ./bycon/config/interval_definitions.yaml -> bycon-2.7.4/./bycon/config
+copying ./bycon/config/plot_defaults.yaml -> bycon-2.7.4/./bycon/config
+copying ./bycon/config/request_profiles.yaml -> bycon-2.7.4/./bycon/config
+copying ./bycon/config/services_configuration.yaml -> bycon-2.7.4/./bycon/config
+copying ./bycon/config/services_map.yaml -> bycon-2.7.4/./bycon/config
+copying ./bycon/config/variant_type_definitions.yaml -> bycon-2.7.4/./bycon/config
+copying ./bycon/lib/__init__.py -> bycon-2.7.4/./bycon/lib
+copying ./bycon/lib/beacon_auth.py -> bycon-2.7.4/./bycon/lib
+copying ./bycon/lib/beacon_responses.py -> bycon-2.7.4/./bycon/lib
+copying ./bycon/lib/bycon_helpers.py -> bycon-2.7.4/./bycon/lib
+copying ./bycon/lib/bycon_info.py -> bycon-2.7.4/./bycon/lib
+copying ./bycon/lib/bycon_summaries.py -> bycon-2.7.4/./bycon/lib
+copying ./bycon/lib/genome_utils.py -> bycon-2.7.4/./bycon/lib
+copying ./bycon/lib/interval_utils.py -> bycon-2.7.4/./bycon/lib
+copying ./bycon/lib/parameter_parsing.py -> bycon-2.7.4/./bycon/lib
+copying ./bycon/lib/query_execution.py -> bycon-2.7.4/./bycon/lib
+copying ./bycon/lib/query_generation.py -> bycon-2.7.4/./bycon/lib
+copying ./bycon/lib/response_remapping.py -> bycon-2.7.4/./bycon/lib
+copying ./bycon/lib/schema_parsing.py -> bycon-2.7.4/./bycon/lib
+copying ./bycon/lib/variant_mapping.py -> bycon-2.7.4/./bycon/lib
+copying ./bycon/lib/vrs_translator.py -> bycon-2.7.4/./bycon/lib
+copying ./bycon/rsrc/__init__.py -> bycon-2.7.4/./bycon/rsrc
+copying ./bycon/rsrc/genomes/grch38/cancer_gene_list.tsv -> bycon-2.7.4/./bycon/rsrc/genomes/grch38
+copying ./bycon/rsrc/genomes/grch38/cytoBandIdeo.txt -> bycon-2.7.4/./bycon/rsrc/genomes/grch38
+copying ./bycon/rsrc/genomes/grch38/genes_grch38.tsv -> bycon-2.7.4/./bycon/rsrc/genomes/grch38
+copying ./bycon/rsrc/genomes/grch38/refseq_chromosomes.yaml -> bycon-2.7.4/./bycon/rsrc/genomes/grch38
+copying ./bycon/rsrc/genomes/hg16/cytoBandIdeo.txt -> bycon-2.7.4/./bycon/rsrc/genomes/hg16
+copying ./bycon/rsrc/genomes/hg17/cytoBandIdeo.txt -> bycon-2.7.4/./bycon/rsrc/genomes/hg17
+copying ./bycon/rsrc/genomes/hg18/cytoBandIdeo.txt -> bycon-2.7.4/./bycon/rsrc/genomes/hg18
+copying ./bycon/rsrc/genomes/hg19/cytoBandIdeo.txt -> bycon-2.7.4/./bycon/rsrc/genomes/hg19
+copying ./bycon/rsrc/genomes/mSarHar1.11/cytoBandIdeo.txt -> bycon-2.7.4/./bycon/rsrc/genomes/mSarHar1.11
+copying ./bycon/rsrc/genomes/mm8/cytoBandIdeo.txt -> bycon-2.7.4/./bycon/rsrc/genomes/mm8
+copying ./bycon/rsrc/genomes/mm9/cytoBandIdeo.txt -> bycon-2.7.4/./bycon/rsrc/genomes/mm9
+copying ./bycon/rsrc/genomes/zf7/cytoBandIdeo.txt -> bycon-2.7.4/./bycon/rsrc/genomes/zf7
+copying ./bycon/schemas/README.md -> bycon-2.7.4/./bycon/schemas
+copying ./bycon/schemas/__init__.py -> bycon-2.7.4/./bycon/schemas
+copying ./bycon/schemas/framework/README.md -> bycon-2.7.4/./bycon/schemas/framework
+copying ./bycon/schemas/framework/common/basicElement.yaml -> bycon-2.7.4/./bycon/schemas/framework/common
+copying ./bycon/schemas/framework/common/beaconCommonComponents.yaml -> bycon-2.7.4/./bycon/schemas/framework/common
+copying ./bycon/schemas/framework/common/elementWithDescription.yaml -> bycon-2.7.4/./bycon/schemas/framework/common
+copying ./bycon/schemas/framework/common/info.yaml -> bycon-2.7.4/./bycon/schemas/framework/common
+copying ./bycon/schemas/framework/common/ontologizedElement.yaml -> bycon-2.7.4/./bycon/schemas/framework/common
+copying ./bycon/schemas/framework/common/ontologyTerm.yaml -> bycon-2.7.4/./bycon/schemas/framework/common
+copying ./bycon/schemas/framework/common/referenceToAnSchema.yaml -> bycon-2.7.4/./bycon/schemas/framework/common
+copying ./bycon/schemas/framework/configuration/beaconConfigurationSchema.yaml -> bycon-2.7.4/./bycon/schemas/framework/configuration
+copying ./bycon/schemas/framework/configuration/beaconMapSchema.yaml -> bycon-2.7.4/./bycon/schemas/framework/configuration
+copying ./bycon/schemas/framework/configuration/entryTypeDefinition.yaml -> bycon-2.7.4/./bycon/schemas/framework/configuration
+copying ./bycon/schemas/framework/configuration/entryTypesSchema.yaml -> bycon-2.7.4/./bycon/schemas/framework/configuration
+copying ./bycon/schemas/framework/requests/aggregationTerms.yaml -> bycon-2.7.4/./bycon/schemas/framework/requests
+copying ./bycon/schemas/framework/requests/beaconRequestBody.yaml -> bycon-2.7.4/./bycon/schemas/framework/requests
+copying ./bycon/schemas/framework/requests/beaconRequestMeta.yaml -> bycon-2.7.4/./bycon/schemas/framework/requests
+copying ./bycon/schemas/framework/requests/filteringTerms.yaml -> bycon-2.7.4/./bycon/schemas/framework/requests
+copying ./bycon/schemas/framework/requests/requestParameters.yaml -> bycon-2.7.4/./bycon/schemas/framework/requests
+copying ./bycon/schemas/framework/responses/beaconAggregationConceptsResponse.yaml -> bycon-2.7.4/./bycon/schemas/framework/responses
+copying ./bycon/schemas/framework/responses/beaconAggregationResponse.yaml -> bycon-2.7.4/./bycon/schemas/framework/responses
+copying ./bycon/schemas/framework/responses/beaconBooleanResponse.yaml -> bycon-2.7.4/./bycon/schemas/framework/responses
+copying ./bycon/schemas/framework/responses/beaconCollectionsResponse.yaml -> bycon-2.7.4/./bycon/schemas/framework/responses
+copying ./bycon/schemas/framework/responses/beaconConfigurationResponse.yaml -> bycon-2.7.4/./bycon/schemas/framework/responses
+copying ./bycon/schemas/framework/responses/beaconCountResponse.yaml -> bycon-2.7.4/./bycon/schemas/framework/responses
+copying ./bycon/schemas/framework/responses/beaconEntryTypesResponse.yaml -> bycon-2.7.4/./bycon/schemas/framework/responses
+copying ./bycon/schemas/framework/responses/beaconErrorResponse.yaml -> bycon-2.7.4/./bycon/schemas/framework/responses
+copying ./bycon/schemas/framework/responses/beaconFilteringTermsResponse.yaml -> bycon-2.7.4/./bycon/schemas/framework/responses
+copying ./bycon/schemas/framework/responses/beaconInfoResponse.yaml -> bycon-2.7.4/./bycon/schemas/framework/responses
+copying ./bycon/schemas/framework/responses/beaconInformationalErrorResponse.yaml -> bycon-2.7.4/./bycon/schemas/framework/responses
+copying ./bycon/schemas/framework/responses/beaconMapResponse.yaml -> bycon-2.7.4/./bycon/schemas/framework/responses
+copying ./bycon/schemas/framework/responses/beaconResultsetsResponse.yaml -> bycon-2.7.4/./bycon/schemas/framework/responses
+copying ./bycon/schemas/framework/responses/byconServiceResponse.yaml -> bycon-2.7.4/./bycon/schemas/framework/responses
+copying ./bycon/schemas/framework/responses/byconServiceResults.yaml -> bycon-2.7.4/./bycon/schemas/framework/responses
+copying ./bycon/schemas/framework/responses/ga4gh-service-info-1-0-0-schema.yaml -> bycon-2.7.4/./bycon/schemas/framework/responses
+copying ./bycon/schemas/framework/responses/examples-sections/beaconAggregationResults-examples.yaml -> bycon-2.7.4/./bycon/schemas/framework/responses/examples-sections
+copying ./bycon/schemas/framework/responses/sections/beaconAggregationResults.yaml -> bycon-2.7.4/./bycon/schemas/framework/responses/sections
+copying ./bycon/schemas/framework/responses/sections/beaconAggregationTermsResults.yaml -> bycon-2.7.4/./bycon/schemas/framework/responses/sections
+copying ./bycon/schemas/framework/responses/sections/beaconBooleanResponseSection.yaml -> bycon-2.7.4/./bycon/schemas/framework/responses/sections
+copying ./bycon/schemas/framework/responses/sections/beaconCountResponseSection.yaml -> bycon-2.7.4/./bycon/schemas/framework/responses/sections
+copying ./bycon/schemas/framework/responses/sections/beaconFilteringTermsResults.yaml -> bycon-2.7.4/./bycon/schemas/framework/responses/sections
+copying ./bycon/schemas/framework/responses/sections/beaconInfoResults.yaml -> bycon-2.7.4/./bycon/schemas/framework/responses/sections
+copying ./bycon/schemas/framework/responses/sections/beaconInformationalResponseMeta.yaml -> bycon-2.7.4/./bycon/schemas/framework/responses/sections
+copying ./bycon/schemas/framework/responses/sections/beaconReceivedRequestSummary.yaml -> bycon-2.7.4/./bycon/schemas/framework/responses/sections
+copying ./bycon/schemas/framework/responses/sections/beaconResponseMeta.yaml -> bycon-2.7.4/./bycon/schemas/framework/responses/sections
+copying ./bycon/schemas/framework/responses/sections/beaconResultsets.yaml -> bycon-2.7.4/./bycon/schemas/framework/responses/sections
+copying ./bycon/schemas/framework/responses/sections/beaconSummaryResponseSection.yaml -> bycon-2.7.4/./bycon/schemas/framework/responses/sections
+copying ./bycon/schemas/models/README.md -> bycon-2.7.4/./bycon/schemas/models
+copying ./bycon/schemas/models/bycon-database-schemas/pgxAnalysis.yaml -> bycon-2.7.4/./bycon/schemas/models/bycon-database-schemas
+copying ./bycon/schemas/models/bycon-database-schemas/pgxBiosample.yaml -> bycon-2.7.4/./bycon/schemas/models/bycon-database-schemas
+copying ./bycon/schemas/models/bycon-database-schemas/pgxCollation.yaml -> bycon-2.7.4/./bycon/schemas/models/bycon-database-schemas
+copying ./bycon/schemas/models/bycon-database-schemas/pgxIndividual.yaml -> bycon-2.7.4/./bycon/schemas/models/bycon-database-schemas
+copying ./bycon/schemas/models/bycon-database-schemas/pgxVariant.yaml -> bycon-2.7.4/./bycon/schemas/models/bycon-database-schemas
+copying ./bycon/schemas/models/bycon-model/analysis.yaml -> bycon-2.7.4/./bycon/schemas/models/bycon-model
+copying ./bycon/schemas/models/bycon-model/beaconConfiguration.yaml -> bycon-2.7.4/./bycon/schemas/models/bycon-model
+copying ./bycon/schemas/models/bycon-model/biosample.yaml -> bycon-2.7.4/./bycon/schemas/models/bycon-model
+copying ./bycon/schemas/models/bycon-model/cohort.yaml -> bycon-2.7.4/./bycon/schemas/models/bycon-model
+copying ./bycon/schemas/models/bycon-model/dataset.yaml -> bycon-2.7.4/./bycon/schemas/models/bycon-model
+copying ./bycon/schemas/models/bycon-model/genomicVariant.yaml -> bycon-2.7.4/./bycon/schemas/models/bycon-model
+copying ./bycon/schemas/models/bycon-model/individual.yaml -> bycon-2.7.4/./bycon/schemas/models/bycon-model
+copying ./bycon/schemas/models/bycon-model/phenopacket.yaml -> bycon-2.7.4/./bycon/schemas/models/bycon-model
+copying ./bycon/schemas/models/bycon-model/requestParameters.yaml -> bycon-2.7.4/./bycon/schemas/models/bycon-model
+copying ./bycon/schemas/models/bycon-model/requestParametersComponents.yaml -> bycon-2.7.4/./bycon/schemas/models/bycon-model
+copying ./bycon/schemas/models/bycon-model/run.yaml -> bycon-2.7.4/./bycon/schemas/models/bycon-model
+copying ./bycon/schemas/models/bycon-model/common/GeoLocation.yaml -> bycon-2.7.4/./bycon/schemas/models/bycon-model/common
+copying ./bycon/schemas/models/bycon-model/common/Interpretation.yaml -> bycon-2.7.4/./bycon/schemas/models/bycon-model/common
+copying ./bycon/schemas/models/bycon-model/common/VRSadjacency.yaml -> bycon-2.7.4/./bycon/schemas/models/bycon-model/common
+copying ./bycon/schemas/models/bycon-model/common/VRSallele.yaml -> bycon-2.7.4/./bycon/schemas/models/bycon-model/common
+copying ./bycon/schemas/models/bycon-model/common/VRScopyNumberChange.yaml -> bycon-2.7.4/./bycon/schemas/models/bycon-model/common
+copying ./bycon/schemas/models/bycon-model/common/VRSsequenceLocation.yaml -> bycon-2.7.4/./bycon/schemas/models/bycon-model/common
+copying ./bycon/schemas/models/bycon-model/common/VitalStatus.yaml -> bycon-2.7.4/./bycon/schemas/models/bycon-model/common
+copying ./bycon/schemas/models/bycon-model/common/age.yaml -> bycon-2.7.4/./bycon/schemas/models/bycon-model/common
+copying ./bycon/schemas/models/bycon-model/common/ageRange.yaml -> bycon-2.7.4/./bycon/schemas/models/bycon-model/common
+copying ./bycon/schemas/models/bycon-model/common/ancestry.yaml -> bycon-2.7.4/./bycon/schemas/models/bycon-model/common
+copying ./bycon/schemas/models/bycon-model/common/celllineInfo.yaml -> bycon-2.7.4/./bycon/schemas/models/bycon-model/common
+copying ./bycon/schemas/models/bycon-model/common/commonDefinitions.yaml -> bycon-2.7.4/./bycon/schemas/models/bycon-model/common
+copying ./bycon/schemas/models/bycon-model/common/complexValue.yaml -> bycon-2.7.4/./bycon/schemas/models/bycon-model/common
+copying ./bycon/schemas/models/bycon-model/common/dataUseConditions.yaml -> bycon-2.7.4/./bycon/schemas/models/bycon-model/common
+copying ./bycon/schemas/models/bycon-model/common/disease.yaml -> bycon-2.7.4/./bycon/schemas/models/bycon-model/common
+copying ./bycon/schemas/models/bycon-model/common/doseInterval.yaml -> bycon-2.7.4/./bycon/schemas/models/bycon-model/common
+copying ./bycon/schemas/models/bycon-model/common/evidence.yaml -> bycon-2.7.4/./bycon/schemas/models/bycon-model/common
+copying ./bycon/schemas/models/bycon-model/common/exposure.yaml -> bycon-2.7.4/./bycon/schemas/models/bycon-model/common
+copying ./bycon/schemas/models/bycon-model/common/externalReference.yaml -> bycon-2.7.4/./bycon/schemas/models/bycon-model/common
+copying ./bycon/schemas/models/bycon-model/common/file.yaml -> bycon-2.7.4/./bycon/schemas/models/bycon-model/common
+copying ./bycon/schemas/models/bycon-model/common/gestationalAge.yaml -> bycon-2.7.4/./bycon/schemas/models/bycon-model/common
+copying ./bycon/schemas/models/bycon-model/common/measurement.yaml -> bycon-2.7.4/./bycon/schemas/models/bycon-model/common
+copying ./bycon/schemas/models/bycon-model/common/metaData.yaml -> bycon-2.7.4/./bycon/schemas/models/bycon-model/common
+copying ./bycon/schemas/models/bycon-model/common/ontologyTerm.yaml -> bycon-2.7.4/./bycon/schemas/models/bycon-model/common
+copying ./bycon/schemas/models/bycon-model/common/pedigree.yaml -> bycon-2.7.4/./bycon/schemas/models/bycon-model/common
+copying ./bycon/schemas/models/bycon-model/common/phenotypicFeature.yaml -> bycon-2.7.4/./bycon/schemas/models/bycon-model/common
+copying ./bycon/schemas/models/bycon-model/common/procedure.yaml -> bycon-2.7.4/./bycon/schemas/models/bycon-model/common
+copying ./bycon/schemas/models/bycon-model/common/quantity.yaml -> bycon-2.7.4/./bycon/schemas/models/bycon-model/common
+copying ./bycon/schemas/models/bycon-model/common/referenceRange.yaml -> bycon-2.7.4/./bycon/schemas/models/bycon-model/common
+copying ./bycon/schemas/models/bycon-model/common/resource.yaml -> bycon-2.7.4/./bycon/schemas/models/bycon-model/common
+copying ./bycon/schemas/models/bycon-model/common/timeElement.yaml -> bycon-2.7.4/./bycon/schemas/models/bycon-model/common
+copying ./bycon/schemas/models/bycon-model/common/timeInterval.yaml -> bycon-2.7.4/./bycon/schemas/models/bycon-model/common
+copying ./bycon/schemas/models/bycon-model/common/treatment.yaml -> bycon-2.7.4/./bycon/schemas/models/bycon-model/common
+copying ./bycon/schemas/models/bycon-model/common/update.yaml -> bycon-2.7.4/./bycon/schemas/models/bycon-model/common
+copying ./bycon/schemas/models/bycon-model/common/value.yaml -> bycon-2.7.4/./bycon/schemas/models/bycon-model/common
+copying ./bycon/schemas/models/bycon-service-schemas/Collation.yaml -> bycon-2.7.4/./bycon/schemas/models/bycon-service-schemas
+copying ./bycon/schemas/models/bycon-service-schemas/CytobandMapping.yaml -> bycon-2.7.4/./bycon/schemas/models/bycon-service-schemas
+copying ./bycon/schemas/models/bycon-service-schemas/IntervalFrequencies.yaml -> bycon-2.7.4/./bycon/schemas/models/bycon-service-schemas
+copying ./bycon/schemas/models/bycon-service-schemas/IntervalFrequencyItem.yaml -> bycon-2.7.4/./bycon/schemas/models/bycon-service-schemas
+copying ./bycon/schemas/models/bycon-service-schemas/OntologyClass.yaml -> bycon-2.7.4/./bycon/schemas/models/bycon-service-schemas
+copying ./bycon/schemas/models/bycon-service-schemas/OntologyClassGroup.yaml -> bycon-2.7.4/./bycon/schemas/models/bycon-service-schemas
+copying ./bycon/schemas/models/bycon-service-schemas/ProgenetixGene.yaml -> bycon-2.7.4/./bycon/schemas/models/bycon-service-schemas
+copying ./bycon/schemas/models/bycon-service-schemas/Provenance.yaml -> bycon-2.7.4/./bycon/schemas/models/bycon-service-schemas
+copying ./bycon/schemas/models/bycon-service-schemas/Publication.yaml -> bycon-2.7.4/./bycon/schemas/models/bycon-service-schemas
+copying ./bycon/schemas/models/bycon-service-schemas/PublicationSampleCounts.yaml -> bycon-2.7.4/./bycon/schemas/models/bycon-service-schemas
+copying ./bycon/schemas/models/bycon-service-schemas/QueryBufferItem.yaml -> bycon-2.7.4/./bycon/schemas/models/bycon-service-schemas
+copying ./bycon/schemas/vrs/vrs-source.yaml -> bycon-2.7.4/./bycon/schemas/vrs
+copying ./byconServices/__init__.py -> bycon-2.7.4/./byconServices
+copying ./byconServices/api.py -> bycon-2.7.4/./byconServices
+copying ./byconServices/byconschemas.py -> bycon-2.7.4/./byconServices
+copying ./byconServices/cnvstats.py -> bycon-2.7.4/./byconServices
+copying ./byconServices/collationplots.py -> bycon-2.7.4/./byconServices
+copying ./byconServices/collations.py -> bycon-2.7.4/./byconServices
+copying ./byconServices/cytomapper.py -> bycon-2.7.4/./byconServices
+copying ./byconServices/dbstats.py -> bycon-2.7.4/./byconServices
+copying ./byconServices/endpoints.py -> bycon-2.7.4/./byconServices
+copying ./byconServices/genespans.py -> bycon-2.7.4/./byconServices
+copying ./byconServices/geolocations.py -> bycon-2.7.4/./byconServices
+copying ./byconServices/ids.py -> bycon-2.7.4/./byconServices
+copying ./byconServices/intervalFrequencies.py -> bycon-2.7.4/./byconServices
+copying ./byconServices/ontologymaps.py -> bycon-2.7.4/./byconServices
+copying ./byconServices/pgxsegvariants.py -> bycon-2.7.4/./byconServices
+copying ./byconServices/publications.py -> bycon-2.7.4/./byconServices
+copying ./byconServices/sampleglobe.py -> bycon-2.7.4/./byconServices
+copying ./byconServices/samplemap.py -> bycon-2.7.4/./byconServices
+copying ./byconServices/samplematrix.py -> bycon-2.7.4/./byconServices
+copying ./byconServices/sampleplots.py -> bycon-2.7.4/./byconServices
+copying ./byconServices/sampletable.py -> bycon-2.7.4/./byconServices
+copying ./byconServices/services.py -> bycon-2.7.4/./byconServices
+copying ./byconServices/tester.py -> bycon-2.7.4/./byconServices
+copying ./byconServices/uploader.py -> bycon-2.7.4/./byconServices
+copying ./byconServices/variantsbedfile.py -> bycon-2.7.4/./byconServices
+copying ./byconServices/vcfvariants.py -> bycon-2.7.4/./byconServices
+copying bycon/__init__.py -> bycon-2.7.4/bycon
+copying bycon/config.py -> bycon-2.7.4/bycon
+copying bycon.egg-info/PKG-INFO -> bycon-2.7.4/bycon.egg-info
+copying bycon.egg-info/SOURCES.txt -> bycon-2.7.4/bycon.egg-info
+copying bycon.egg-info/dependency_links.txt -> bycon-2.7.4/bycon.egg-info
+copying bycon.egg-info/requires.txt -> bycon-2.7.4/bycon.egg-info
+copying bycon.egg-info/top_level.txt -> bycon-2.7.4/bycon.egg-info
+copying bycon/byconServiceLibs/__init__.py -> bycon-2.7.4/bycon/byconServiceLibs
+copying bycon/byconServiceLibs/bycon_bundler.py -> bycon-2.7.4/bycon/byconServiceLibs
+copying bycon/byconServiceLibs/bycon_cluster.py -> bycon-2.7.4/bycon/byconServiceLibs
+copying bycon/byconServiceLibs/bycon_importer.py -> bycon-2.7.4/bycon/byconServiceLibs
+copying bycon/byconServiceLibs/bycon_plot.py -> bycon-2.7.4/bycon/byconServiceLibs
+copying bycon/byconServiceLibs/collation_utils.py -> bycon-2.7.4/bycon/byconServiceLibs
+copying bycon/byconServiceLibs/cytoband_utils.py -> bycon-2.7.4/bycon/byconServiceLibs
+copying bycon/byconServiceLibs/datatable_utils.py -> bycon-2.7.4/bycon/byconServiceLibs
+copying bycon/byconServiceLibs/export_file_generation.py -> bycon-2.7.4/bycon/byconServiceLibs
+copying bycon/byconServiceLibs/file_utils.py -> bycon-2.7.4/bycon/byconServiceLibs
+copying bycon/byconServiceLibs/geoloc_utils.py -> bycon-2.7.4/bycon/byconServiceLibs
+copying bycon/byconServiceLibs/ontology_utils.py -> bycon-2.7.4/bycon/byconServiceLibs
+copying bycon/byconServiceLibs/service_helpers.py -> bycon-2.7.4/bycon/byconServiceLibs
+copying bycon/byconServiceLibs/service_response_generation.py -> bycon-2.7.4/bycon/byconServiceLibs
+copying bycon/config/aggregation_terms.yaml -> bycon-2.7.4/bycon/config
+copying bycon/config/argument_definitions.yaml -> bycon-2.7.4/bycon/config
+copying bycon/config/beacon_configuration.yaml -> bycon-2.7.4/bycon/config
+copying bycon/config/beacon_map.yaml -> bycon-2.7.4/bycon/config
+copying bycon/config/dataset_definitions.yaml -> bycon-2.7.4/bycon/config
+copying bycon/config/datatable_mappings.yaml -> bycon-2.7.4/bycon/config
+copying bycon/config/filter_definitions.yaml -> bycon-2.7.4/bycon/config
+copying bycon/config/handover_definitions.yaml -> bycon-2.7.4/bycon/config
+copying bycon/config/interval_definitions.yaml -> bycon-2.7.4/bycon/config
+copying bycon/config/plot_defaults.yaml -> bycon-2.7.4/bycon/config
+copying bycon/config/request_profiles.yaml -> bycon-2.7.4/bycon/config
+copying bycon/config/services_configuration.yaml -> bycon-2.7.4/bycon/config
+copying bycon/config/services_map.yaml -> bycon-2.7.4/bycon/config
+copying bycon/config/variant_type_definitions.yaml -> bycon-2.7.4/bycon/config
+copying bycon/lib/__init__.py -> bycon-2.7.4/bycon/lib
+copying bycon/lib/beacon_auth.py -> bycon-2.7.4/bycon/lib
+copying bycon/lib/beacon_responses.py -> bycon-2.7.4/bycon/lib
+copying bycon/lib/bycon_helpers.py -> bycon-2.7.4/bycon/lib
+copying bycon/lib/bycon_info.py -> bycon-2.7.4/bycon/lib
+copying bycon/lib/bycon_summaries.py -> bycon-2.7.4/bycon/lib
+copying bycon/lib/genome_utils.py -> bycon-2.7.4/bycon/lib
+copying bycon/lib/interval_utils.py -> bycon-2.7.4/bycon/lib
+copying bycon/lib/parameter_parsing.py -> bycon-2.7.4/bycon/lib
+copying bycon/lib/query_execution.py -> bycon-2.7.4/bycon/lib
+copying bycon/lib/query_generation.py -> bycon-2.7.4/bycon/lib
+copying bycon/lib/response_remapping.py -> bycon-2.7.4/bycon/lib
+copying bycon/lib/schema_parsing.py -> bycon-2.7.4/bycon/lib
+copying bycon/lib/variant_mapping.py -> bycon-2.7.4/bycon/lib
+copying bycon/lib/vrs_translator.py -> bycon-2.7.4/bycon/lib
+copying bycon/rsrc/__init__.py -> bycon-2.7.4/bycon/rsrc
+copying bycon/rsrc/genomes/grch38/cancer_gene_list.tsv -> bycon-2.7.4/bycon/rsrc/genomes/grch38
+copying bycon/rsrc/genomes/grch38/cytoBandIdeo.txt -> bycon-2.7.4/bycon/rsrc/genomes/grch38
+copying bycon/rsrc/genomes/grch38/genes_grch38.tsv -> bycon-2.7.4/bycon/rsrc/genomes/grch38
+copying bycon/rsrc/genomes/grch38/refseq_chromosomes.yaml -> bycon-2.7.4/bycon/rsrc/genomes/grch38
+copying bycon/rsrc/genomes/hg16/cytoBandIdeo.txt -> bycon-2.7.4/bycon/rsrc/genomes/hg16
+copying bycon/rsrc/genomes/hg17/cytoBandIdeo.txt -> bycon-2.7.4/bycon/rsrc/genomes/hg17
+copying bycon/rsrc/genomes/hg18/cytoBandIdeo.txt -> bycon-2.7.4/bycon/rsrc/genomes/hg18
+copying bycon/rsrc/genomes/hg19/cytoBandIdeo.txt -> bycon-2.7.4/bycon/rsrc/genomes/hg19
+copying bycon/rsrc/genomes/mSarHar1.11/cytoBandIdeo.txt -> bycon-2.7.4/bycon/rsrc/genomes/mSarHar1.11
+copying bycon/rsrc/genomes/mm8/cytoBandIdeo.txt -> bycon-2.7.4/bycon/rsrc/genomes/mm8
+copying bycon/rsrc/genomes/mm9/cytoBandIdeo.txt -> bycon-2.7.4/bycon/rsrc/genomes/mm9
+copying bycon/rsrc/genomes/zf7/cytoBandIdeo.txt -> bycon-2.7.4/bycon/rsrc/genomes/zf7
+copying bycon/schemas/README.md -> bycon-2.7.4/bycon/schemas
+copying bycon/schemas/__init__.py -> bycon-2.7.4/bycon/schemas
+copying bycon/schemas/framework/README.md -> bycon-2.7.4/bycon/schemas/framework
+copying bycon/schemas/framework/common/basicElement.yaml -> bycon-2.7.4/bycon/schemas/framework/common
+copying bycon/schemas/framework/common/beaconCommonComponents.yaml -> bycon-2.7.4/bycon/schemas/framework/common
+copying bycon/schemas/framework/common/elementWithDescription.yaml -> bycon-2.7.4/bycon/schemas/framework/common
+copying bycon/schemas/framework/common/info.yaml -> bycon-2.7.4/bycon/schemas/framework/common
+copying bycon/schemas/framework/common/ontologizedElement.yaml -> bycon-2.7.4/bycon/schemas/framework/common
+copying bycon/schemas/framework/common/ontologyTerm.yaml -> bycon-2.7.4/bycon/schemas/framework/common
+copying bycon/schemas/framework/common/referenceToAnSchema.yaml -> bycon-2.7.4/bycon/schemas/framework/common
+copying bycon/schemas/framework/configuration/beaconConfigurationSchema.yaml -> bycon-2.7.4/bycon/schemas/framework/configuration
+copying bycon/schemas/framework/configuration/beaconMapSchema.yaml -> bycon-2.7.4/bycon/schemas/framework/configuration
+copying bycon/schemas/framework/configuration/entryTypeDefinition.yaml -> bycon-2.7.4/bycon/schemas/framework/configuration
+copying bycon/schemas/framework/configuration/entryTypesSchema.yaml -> bycon-2.7.4/bycon/schemas/framework/configuration
+copying bycon/schemas/framework/requests/aggregationTerms.yaml -> bycon-2.7.4/bycon/schemas/framework/requests
+copying bycon/schemas/framework/requests/beaconRequestBody.yaml -> bycon-2.7.4/bycon/schemas/framework/requests
+copying bycon/schemas/framework/requests/beaconRequestMeta.yaml -> bycon-2.7.4/bycon/schemas/framework/requests
+copying bycon/schemas/framework/requests/filteringTerms.yaml -> bycon-2.7.4/bycon/schemas/framework/requests
+copying bycon/schemas/framework/requests/requestParameters.yaml -> bycon-2.7.4/bycon/schemas/framework/requests
+copying bycon/schemas/framework/responses/beaconAggregationConceptsResponse.yaml -> bycon-2.7.4/bycon/schemas/framework/responses
+copying bycon/schemas/framework/responses/beaconAggregationResponse.yaml -> bycon-2.7.4/bycon/schemas/framework/responses
+copying bycon/schemas/framework/responses/beaconBooleanResponse.yaml -> bycon-2.7.4/bycon/schemas/framework/responses
+copying bycon/schemas/framework/responses/beaconCollectionsResponse.yaml -> bycon-2.7.4/bycon/schemas/framework/responses
+copying bycon/schemas/framework/responses/beaconConfigurationResponse.yaml -> bycon-2.7.4/bycon/schemas/framework/responses
+copying bycon/schemas/framework/responses/beaconCountResponse.yaml -> bycon-2.7.4/bycon/schemas/framework/responses
+copying bycon/schemas/framework/responses/beaconEntryTypesResponse.yaml -> bycon-2.7.4/bycon/schemas/framework/responses
+copying bycon/schemas/framework/responses/beaconErrorResponse.yaml -> bycon-2.7.4/bycon/schemas/framework/responses
+copying bycon/schemas/framework/responses/beaconFilteringTermsResponse.yaml -> bycon-2.7.4/bycon/schemas/framework/responses
+copying bycon/schemas/framework/responses/beaconInfoResponse.yaml -> bycon-2.7.4/bycon/schemas/framework/responses
+copying bycon/schemas/framework/responses/beaconInformationalErrorResponse.yaml -> bycon-2.7.4/bycon/schemas/framework/responses
+copying bycon/schemas/framework/responses/beaconMapResponse.yaml -> bycon-2.7.4/bycon/schemas/framework/responses
+copying bycon/schemas/framework/responses/beaconResultsetsResponse.yaml -> bycon-2.7.4/bycon/schemas/framework/responses
+copying bycon/schemas/framework/responses/byconServiceResponse.yaml -> bycon-2.7.4/bycon/schemas/framework/responses
+copying bycon/schemas/framework/responses/byconServiceResults.yaml -> bycon-2.7.4/bycon/schemas/framework/responses
+copying bycon/schemas/framework/responses/ga4gh-service-info-1-0-0-schema.yaml -> bycon-2.7.4/bycon/schemas/framework/responses
+copying bycon/schemas/framework/responses/examples-sections/beaconAggregationResults-examples.yaml -> bycon-2.7.4/bycon/schemas/framework/responses/examples-sections
+copying bycon/schemas/framework/responses/sections/beaconAggregationResults.yaml -> bycon-2.7.4/bycon/schemas/framework/responses/sections
+copying bycon/schemas/framework/responses/sections/beaconAggregationTermsResults.yaml -> bycon-2.7.4/bycon/schemas/framework/responses/sections
+copying bycon/schemas/framework/responses/sections/beaconBooleanResponseSection.yaml -> bycon-2.7.4/bycon/schemas/framework/responses/sections
+copying bycon/schemas/framework/responses/sections/beaconCountResponseSection.yaml -> bycon-2.7.4/bycon/schemas/framework/responses/sections
+copying bycon/schemas/framework/responses/sections/beaconFilteringTermsResults.yaml -> bycon-2.7.4/bycon/schemas/framework/responses/sections
+copying bycon/schemas/framework/responses/sections/beaconInfoResults.yaml -> bycon-2.7.4/bycon/schemas/framework/responses/sections
+copying bycon/schemas/framework/responses/sections/beaconInformationalResponseMeta.yaml -> bycon-2.7.4/bycon/schemas/framework/responses/sections
+copying bycon/schemas/framework/responses/sections/beaconReceivedRequestSummary.yaml -> bycon-2.7.4/bycon/schemas/framework/responses/sections
+copying bycon/schemas/framework/responses/sections/beaconResponseMeta.yaml -> bycon-2.7.4/bycon/schemas/framework/responses/sections
+copying bycon/schemas/framework/responses/sections/beaconResultsets.yaml -> bycon-2.7.4/bycon/schemas/framework/responses/sections
+copying bycon/schemas/framework/responses/sections/beaconSummaryResponseSection.yaml -> bycon-2.7.4/bycon/schemas/framework/responses/sections
+copying bycon/schemas/models/README.md -> bycon-2.7.4/bycon/schemas/models
+copying bycon/schemas/models/bycon-database-schemas/pgxAnalysis.yaml -> bycon-2.7.4/bycon/schemas/models/bycon-database-schemas
+copying bycon/schemas/models/bycon-database-schemas/pgxBiosample.yaml -> bycon-2.7.4/bycon/schemas/models/bycon-database-schemas
+copying bycon/schemas/models/bycon-database-schemas/pgxCollation.yaml -> bycon-2.7.4/bycon/schemas/models/bycon-database-schemas
+copying bycon/schemas/models/bycon-database-schemas/pgxIndividual.yaml -> bycon-2.7.4/bycon/schemas/models/bycon-database-schemas
+copying bycon/schemas/models/bycon-database-schemas/pgxVariant.yaml -> bycon-2.7.4/bycon/schemas/models/bycon-database-schemas
+copying bycon/schemas/models/bycon-model/analysis.yaml -> bycon-2.7.4/bycon/schemas/models/bycon-model
+copying bycon/schemas/models/bycon-model/beaconConfiguration.yaml -> bycon-2.7.4/bycon/schemas/models/bycon-model
+copying bycon/schemas/models/bycon-model/biosample.yaml -> bycon-2.7.4/bycon/schemas/models/bycon-model
+copying bycon/schemas/models/bycon-model/cohort.yaml -> bycon-2.7.4/bycon/schemas/models/bycon-model
+copying bycon/schemas/models/bycon-model/dataset.yaml -> bycon-2.7.4/bycon/schemas/models/bycon-model
+copying bycon/schemas/models/bycon-model/genomicVariant.yaml -> bycon-2.7.4/bycon/schemas/models/bycon-model
+copying bycon/schemas/models/bycon-model/individual.yaml -> bycon-2.7.4/bycon/schemas/models/bycon-model
+copying bycon/schemas/models/bycon-model/phenopacket.yaml -> bycon-2.7.4/bycon/schemas/models/bycon-model
+copying bycon/schemas/models/bycon-model/requestParameters.yaml -> bycon-2.7.4/bycon/schemas/models/bycon-model
+copying bycon/schemas/models/bycon-model/requestParametersComponents.yaml -> bycon-2.7.4/bycon/schemas/models/bycon-model
+copying bycon/schemas/models/bycon-model/run.yaml -> bycon-2.7.4/bycon/schemas/models/bycon-model
+copying bycon/schemas/models/bycon-model/common/GeoLocation.yaml -> bycon-2.7.4/bycon/schemas/models/bycon-model/common
+copying bycon/schemas/models/bycon-model/common/Interpretation.yaml -> bycon-2.7.4/bycon/schemas/models/bycon-model/common
+copying bycon/schemas/models/bycon-model/common/VRSadjacency.yaml -> bycon-2.7.4/bycon/schemas/models/bycon-model/common
+copying bycon/schemas/models/bycon-model/common/VRSallele.yaml -> bycon-2.7.4/bycon/schemas/models/bycon-model/common
+copying bycon/schemas/models/bycon-model/common/VRScopyNumberChange.yaml -> bycon-2.7.4/bycon/schemas/models/bycon-model/common
+copying bycon/schemas/models/bycon-model/common/VRSsequenceLocation.yaml -> bycon-2.7.4/bycon/schemas/models/bycon-model/common
+copying bycon/schemas/models/bycon-model/common/VitalStatus.yaml -> bycon-2.7.4/bycon/schemas/models/bycon-model/common
+copying bycon/schemas/models/bycon-model/common/age.yaml -> bycon-2.7.4/bycon/schemas/models/bycon-model/common
+copying bycon/schemas/models/bycon-model/common/ageRange.yaml -> bycon-2.7.4/bycon/schemas/models/bycon-model/common
+copying bycon/schemas/models/bycon-model/common/ancestry.yaml -> bycon-2.7.4/bycon/schemas/models/bycon-model/common
+copying bycon/schemas/models/bycon-model/common/celllineInfo.yaml -> bycon-2.7.4/bycon/schemas/models/bycon-model/common
+copying bycon/schemas/models/bycon-model/common/commonDefinitions.yaml -> bycon-2.7.4/bycon/schemas/models/bycon-model/common
+copying bycon/schemas/models/bycon-model/common/complexValue.yaml -> bycon-2.7.4/bycon/schemas/models/bycon-model/common
+copying bycon/schemas/models/bycon-model/common/dataUseConditions.yaml -> bycon-2.7.4/bycon/schemas/models/bycon-model/common
+copying bycon/schemas/models/bycon-model/common/disease.yaml -> bycon-2.7.4/bycon/schemas/models/bycon-model/common
+copying bycon/schemas/models/bycon-model/common/doseInterval.yaml -> bycon-2.7.4/bycon/schemas/models/bycon-model/common
+copying bycon/schemas/models/bycon-model/common/evidence.yaml -> bycon-2.7.4/bycon/schemas/models/bycon-model/common
+copying bycon/schemas/models/bycon-model/common/exposure.yaml -> bycon-2.7.4/bycon/schemas/models/bycon-model/common
+copying bycon/schemas/models/bycon-model/common/externalReference.yaml -> bycon-2.7.4/bycon/schemas/models/bycon-model/common
+copying bycon/schemas/models/bycon-model/common/file.yaml -> bycon-2.7.4/bycon/schemas/models/bycon-model/common
+copying bycon/schemas/models/bycon-model/common/gestationalAge.yaml -> bycon-2.7.4/bycon/schemas/models/bycon-model/common
+copying bycon/schemas/models/bycon-model/common/measurement.yaml -> bycon-2.7.4/bycon/schemas/models/bycon-model/common
+copying bycon/schemas/models/bycon-model/common/metaData.yaml -> bycon-2.7.4/bycon/schemas/models/bycon-model/common
+copying bycon/schemas/models/bycon-model/common/ontologyTerm.yaml -> bycon-2.7.4/bycon/schemas/models/bycon-model/common
+copying bycon/schemas/models/bycon-model/common/pedigree.yaml -> bycon-2.7.4/bycon/schemas/models/bycon-model/common
+copying bycon/schemas/models/bycon-model/common/phenotypicFeature.yaml -> bycon-2.7.4/bycon/schemas/models/bycon-model/common
+copying bycon/schemas/models/bycon-model/common/procedure.yaml -> bycon-2.7.4/bycon/schemas/models/bycon-model/common
+copying bycon/schemas/models/bycon-model/common/quantity.yaml -> bycon-2.7.4/bycon/schemas/models/bycon-model/common
+copying bycon/schemas/models/bycon-model/common/referenceRange.yaml -> bycon-2.7.4/bycon/schemas/models/bycon-model/common
+copying bycon/schemas/models/bycon-model/common/resource.yaml -> bycon-2.7.4/bycon/schemas/models/bycon-model/common
+copying bycon/schemas/models/bycon-model/common/timeElement.yaml -> bycon-2.7.4/bycon/schemas/models/bycon-model/common
+copying bycon/schemas/models/bycon-model/common/timeInterval.yaml -> bycon-2.7.4/bycon/schemas/models/bycon-model/common
+copying bycon/schemas/models/bycon-model/common/treatment.yaml -> bycon-2.7.4/bycon/schemas/models/bycon-model/common
+copying bycon/schemas/models/bycon-model/common/update.yaml -> bycon-2.7.4/bycon/schemas/models/bycon-model/common
+copying bycon/schemas/models/bycon-model/common/value.yaml -> bycon-2.7.4/bycon/schemas/models/bycon-model/common
+copying bycon/schemas/models/bycon-service-schemas/Collation.yaml -> bycon-2.7.4/bycon/schemas/models/bycon-service-schemas
+copying bycon/schemas/models/bycon-service-schemas/CytobandMapping.yaml -> bycon-2.7.4/bycon/schemas/models/bycon-service-schemas
+copying bycon/schemas/models/bycon-service-schemas/IntervalFrequencies.yaml -> bycon-2.7.4/bycon/schemas/models/bycon-service-schemas
+copying bycon/schemas/models/bycon-service-schemas/IntervalFrequencyItem.yaml -> bycon-2.7.4/bycon/schemas/models/bycon-service-schemas
+copying bycon/schemas/models/bycon-service-schemas/OntologyClass.yaml -> bycon-2.7.4/bycon/schemas/models/bycon-service-schemas
+copying bycon/schemas/models/bycon-service-schemas/OntologyClassGroup.yaml -> bycon-2.7.4/bycon/schemas/models/bycon-service-schemas
+copying bycon/schemas/models/bycon-service-schemas/ProgenetixGene.yaml -> bycon-2.7.4/bycon/schemas/models/bycon-service-schemas
+copying bycon/schemas/models/bycon-service-schemas/Provenance.yaml -> bycon-2.7.4/bycon/schemas/models/bycon-service-schemas
+copying bycon/schemas/models/bycon-service-schemas/Publication.yaml -> bycon-2.7.4/bycon/schemas/models/bycon-service-schemas
+copying bycon/schemas/models/bycon-service-schemas/PublicationSampleCounts.yaml -> bycon-2.7.4/bycon/schemas/models/bycon-service-schemas
+copying bycon/schemas/models/bycon-service-schemas/QueryBufferItem.yaml -> bycon-2.7.4/bycon/schemas/models/bycon-service-schemas
+copying bycon/schemas/vrs/vrs-source.yaml -> bycon-2.7.4/bycon/schemas/vrs
+copying byconServices/__init__.py -> bycon-2.7.4/byconServices
+copying byconServices/api.py -> bycon-2.7.4/byconServices
+copying byconServices/byconschemas.py -> bycon-2.7.4/byconServices
+copying byconServices/cnvstats.py -> bycon-2.7.4/byconServices
+copying byconServices/collationplots.py -> bycon-2.7.4/byconServices
+copying byconServices/collations.py -> bycon-2.7.4/byconServices
+copying byconServices/cytomapper.py -> bycon-2.7.4/byconServices
+copying byconServices/dbstats.py -> bycon-2.7.4/byconServices
+copying byconServices/endpoints.py -> bycon-2.7.4/byconServices
+copying byconServices/genespans.py -> bycon-2.7.4/byconServices
+copying byconServices/geolocations.py -> bycon-2.7.4/byconServices
+copying byconServices/ids.py -> bycon-2.7.4/byconServices
+copying byconServices/intervalFrequencies.py -> bycon-2.7.4/byconServices
+copying byconServices/ontologymaps.py -> bycon-2.7.4/byconServices
+copying byconServices/pgxsegvariants.py -> bycon-2.7.4/byconServices
+copying byconServices/publications.py -> bycon-2.7.4/byconServices
+copying byconServices/sampleglobe.py -> bycon-2.7.4/byconServices
+copying byconServices/samplemap.py -> bycon-2.7.4/byconServices
+copying byconServices/samplematrix.py -> bycon-2.7.4/byconServices
+copying byconServices/sampleplots.py -> bycon-2.7.4/byconServices
+copying byconServices/sampletable.py -> bycon-2.7.4/byconServices
+copying byconServices/services.py -> bycon-2.7.4/byconServices
+copying byconServices/tester.py -> bycon-2.7.4/byconServices
+copying byconServices/uploader.py -> bycon-2.7.4/byconServices
+copying byconServices/variantsbedfile.py -> bycon-2.7.4/byconServices
+copying byconServices/vcfvariants.py -> bycon-2.7.4/byconServices
+copying bycon.egg-info/SOURCES.txt -> bycon-2.7.4/bycon.egg-info
+Writing bycon-2.7.4/setup.cfg
+Creating tar archive
+removing 'bycon-2.7.4' (and everything under it)
+Successfully built bycon-2.7.4.tar.gz
+Processing ./dist/bycon-2.7.4.tar.gz
+  Preparing metadata (pyproject.toml) ... done
+Requirement already satisfied: base36 in /opt/homebrew/lib/python3.13/site-packages (from bycon==2.7.4) (0.1.1)
+Requirement already satisfied: Cython in /opt/homebrew/lib/python3.13/site-packages (from bycon==2.7.4) (3.1.2)
+Requirement already satisfied: isodate in /opt/homebrew/lib/python3.13/site-packages (from bycon==2.7.4) (0.7.2)
+Requirement already satisfied: json_ref_dict in /opt/homebrew/lib/python3.13/site-packages (from bycon==2.7.4) (0.7.2)
+Requirement already satisfied: Markdown in /opt/homebrew/lib/python3.13/site-packages (from bycon==2.7.4) (3.8.2)
+Requirement already satisfied: numpy in /opt/homebrew/lib/python3.13/site-packages (from bycon==2.7.4) (2.3.2)
+Requirement already satisfied: Pillow in /opt/homebrew/lib/python3.13/site-packages (from bycon==2.7.4) (11.3.0)
+Requirement already satisfied: pyhumps in /opt/homebrew/lib/python3.13/site-packages (from bycon==2.7.4) (3.8.0)
+Requirement already satisfied: pymongo in /opt/homebrew/lib/python3.13/site-packages (from bycon==2.7.4) (4.13.2)
+Requirement already satisfied: PyYAML in /opt/homebrew/lib/python3.13/site-packages (from bycon==2.7.4) (6.0.2)
+Requirement already satisfied: scipy in /opt/homebrew/lib/python3.13/site-packages (from bycon==2.7.4) (1.16.1)
+Requirement already satisfied: jsonpointer~=2.0 in /opt/homebrew/lib/python3.13/site-packages (from json_ref_dict->bycon==2.7.4) (2.4)
+Requirement already satisfied: dnspython<3.0.0,>=1.16.0 in /opt/homebrew/lib/python3.13/site-packages (from pymongo->bycon==2.7.4) (2.7.0)
+Building wheels for collected packages: bycon
+  Building wheel for bycon (pyproject.toml) ... done
+  Created wheel for bycon: filename=bycon-2.7.4-py3-none-any.whl size=1511864 sha256=9329ba8a04c8d1159ca55a9de7123cad737049933d1bcd288fc9f87d26d80344
+  Stored in directory: /Users/bgadmin/Library/Caches/pip/wheels/81/77/3b/e5329bf655eb2cb8e331318405ee0662776435e62dc9549342
+Successfully built bycon
+Installing collected packages: bycon
+  Attempting uninstall: bycon
+    Found existing installation: bycon 2.7.4
+    Uninstalling bycon-2.7.4:
+      Successfully uninstalled bycon-2.7.4
+Successfully installed bycon-2.7.4
+WARNING:bycon:Optional local config /Users/bgadmin/GitHub/bycon/../local/authorizations.yaml not found
+WARNING:bycon:Optional local config /Users/bgadmin/GitHub/bycon/../local/env_paths.yaml not found
+WARNING:bycon:Optional local config /Users/bgadmin/GitHub/bycon/../local/filter_definitions.yaml not found
+WARNING:bycon:Optional local config /Users/bgadmin/GitHub/bycon/../local/datatable_mappings.yaml not found
+WARNING:bycon:Optional local config /Users/bgadmin/GitHub/bycon/../local/test_queries.yaml not found
+WARNING:bycon:Optional local config /Users/bgadmin/GitHub/bycon/../local/plot_defaults.yaml not found
+... generating docs in /Users/bgadmin/GitHub/bycon/byconServices
+sending incremental file list
+./
+dataset_definitions/
+domain_definitions/
+
+sent 560 bytes  received 63 bytes  1.25K bytes/sec
+total size is 14.97K  speedup is 24.04
+==> Copied server configuration files from /Users/bgadmin/GitHub/bycon/local/ to /opt/homebrew/var/www/cgi-bin/bycon/local/
+sending incremental file list
+./
+
+sent 114 bytes  received 25 bytes  278.00 bytes/sec
+total size is 2.05K  speedup is 14.76
+==> Copied server files from /Users/bgadmin/GitHub/bycon/beaconServer/ to /opt/homebrew/var/www/cgi-bin/bycon/beaconServer/
+sending incremental file list
+./
+__pycache__/
+config/
+
+sent 2.15K bytes  received 192 bytes  4.69K bytes/sec
+total size is 123.89K  speedup is 52.88
+==> Copied server files from /Users/bgadmin/GitHub/bycon/byconServices/ to /opt/homebrew/var/www/cgi-bin/bycon/services/
+sudo chmod 775 /opt/homebrew/var/www/cgi-bin/bycon/beaconServer/*.py
+sudo chmod 775 /opt/homebrew/var/www/cgi-bin/bycon/services/*.py
+Updated bycon files from
+/Users/bgadmin/GitHub/bycon/bycon
+to
+/opt/homebrew/var/www/cgi-bin/bycon
+Do you want to build the web frontend?
+"y" => test server, "s" => main server, otherwise enter for stopping: y
+
+> local
+> env-cmd -f env/local npm run-script build
+
+
+> build
+> npm run lint && npm run test && next build && next export
+
+
+> lint
+> eslint src
+
+sh: eslint: command not found
+==> npm run local
+sending incremental file list
+rsync: [sender] change_dir "/Users/bgadmin/GitHub/bycon/beaconplusWeb/out" failed: No such file or directory (2)
+
+sent 19 bytes  received 12 bytes  62.00 bytes/sec
+total size is 0  speedup is 0.00
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1358) [sender=3.4.1]
+==> sudo rsync -avh out/* /opt/homebrew/var/www/Documents/Sites/beaconplus
+... website files copied to `/opt/homebrew/var/www/Documents/Sites/beaconplus`
+bgadmin@Baudisgroups-MacBook-Air bycon % 
+bgadmin@Baudisgroups-MacBook-Air bycon % 
+bgadmin@Baudisgroups-MacBook-Air bycon %         
+bgadmin@Baudisgroups-MacBook-Air bycon % ls    
+LICENSE			byconServices		local			package.json		tests
+README.md		docs			markdowner.py		pipIt.sh		updev.sh
+beaconServer		housekeepers		mkdocs.yaml		pyproject.toml
+beaconplusWeb		importers		node_modules		requirements.txt
+bycon			install.py		package-lock.json	rsrc
+bgadmin@Baudisgroups-MacBook-Air bycon % cd beaconplusWeb 
+bgadmin@Baudisgroups-MacBook-Air beaconplusWeb % npm install
+npm error code ERESOLVE
+npm error ERESOLVE could not resolve
+npm error
+npm error While resolving: next@15.5.10
+npm error Found: react@17.0.2
+npm error node_modules/react
+npm error   react@"^17.0.2" from the root project
+npm error   peer react@">=16.8.0" from @emotion/react@11.14.0
+npm error   node_modules/@emotion/react
+npm error     @emotion/react@"^11.10.5" from the root project
+npm error     peer @emotion/react@"^11.0.0-rc.0" from @emotion/styled@11.14.1
+npm error     node_modules/@emotion/styled
+npm error       @emotion/styled@"^11.10.5" from the root project
+npm error       11 more (@jbrowse/react-linear-genome-view, @mui/x-data-grid, ...)
+npm error     13 more (@jbrowse/react-linear-genome-view, @mui/x-data-grid, ...)
+npm error   101 more (@emotion/styled, ...)
+npm error
+npm error Could not resolve dependency:
+npm error peer react@"^18.2.0 || 19.0.0-rc-de68d2f4-20241204 || ^19.0.0" from next@15.5.10
+npm error node_modules/next
+npm error   next@"^15.5.10" from the root project
+npm error
+npm error Conflicting peer dependency: react@19.2.4
+npm error node_modules/react
+npm error   peer react@"^18.2.0 || 19.0.0-rc-de68d2f4-20241204 || ^19.0.0" from next@15.5.10
+npm error   node_modules/next
+npm error     next@"^15.5.10" from the root project
+npm error
+npm error Fix the upstream dependency conflict, or retry
+npm error this command with --force or --legacy-peer-deps
+npm error to accept an incorrect (and potentially broken) dependency resolution.
+npm error
+npm error
+npm error For a full report see:
+npm error /Users/bgadmin/.npm/_logs/2026-02-20T15_02_08_347Z-eresolve-report.txt
+npm error A complete log of this run can be found in: /Users/bgadmin/.npm/_logs/2026-02-20T15_02_08_347Z-debug-0.log
+bgadmin@Baudisgroups-MacBook-Air beaconplusWeb % npm run local
+
+> local
+> env-cmd -f env/local npm run-script build
+
+
+> build
+> npm run lint && npm run test && next build && next export
+
+
+> lint
+> eslint src
+
+sh: eslint: command not found
+bgadmin@Baudisgroups-MacBook-Air beaconplusWeb % npm install eslint
+npm error code ERESOLVE
+npm error ERESOLVE could not resolve
+npm error
+npm error While resolving: next@15.5.10
+npm error Found: react@17.0.2
+npm error node_modules/react
+npm error   peer react@">=16.8.0" from @emotion/react@11.14.0
+npm error   node_modules/@emotion/react
+npm error     peer @emotion/react@"^11.0.0-rc.0" from @emotion/styled@11.14.1
+npm error     node_modules/@emotion/styled
+npm error       @emotion/styled@"^11.8.1" from @jbrowse/react-linear-genome-view@2.18.0
+npm error       node_modules/@jbrowse/react-linear-genome-view
+npm error         @jbrowse/react-linear-genome-view@"^2.4.2" from the root project
+npm error       11 more (@mui/x-data-grid, @mui/x-data-grid, @mui/x-data-grid, ...)
+npm error     @emotion/react@"^11.9.0" from @jbrowse/react-linear-genome-view@2.18.0
+npm error     node_modules/@jbrowse/react-linear-genome-view
+npm error       @jbrowse/react-linear-genome-view@"^2.4.2" from the root project
+npm error     13 more (@mui/x-data-grid, @mui/x-data-grid, @mui/x-data-grid, ...)
+npm error   peer react@">=16.8.0" from @emotion/styled@11.14.1
+npm error   node_modules/@emotion/styled
+npm error     @emotion/styled@"^11.8.1" from @jbrowse/react-linear-genome-view@2.18.0
+npm error     node_modules/@jbrowse/react-linear-genome-view
+npm error       @jbrowse/react-linear-genome-view@"^2.4.2" from the root project
+npm error     peerOptional @emotion/styled@"^11.8.1" from @mui/x-data-grid@7.29.9
+npm error     node_modules/@jbrowse/react-linear-genome-view/node_modules/@jbrowse/core/node_modules/@mui/x-data-grid
+npm error       @mui/x-data-grid@"^7.0.0" from @jbrowse/core@2.18.0
+npm error       node_modules/@jbrowse/react-linear-genome-view/node_modules/@jbrowse/core
+npm error         @jbrowse/core@"^2.18.0" from @jbrowse/react-linear-genome-view@2.18.0
+npm error         node_modules/@jbrowse/react-linear-genome-view
+npm error         20 more (@jbrowse/embedded-core, @jbrowse/plugin-alignments, ...)
+npm error     10 more (@mui/x-data-grid, @mui/x-data-grid, @mui/x-data-grid, ...)
+npm error   101 more (@emotion/use-insertion-effect-with-fallbacks, ...)
+npm error
+npm error Could not resolve dependency:
+npm error peer react@"^18.2.0 || 19.0.0-rc-de68d2f4-20241204 || ^19.0.0" from next@15.5.10
+npm error node_modules/next
+npm error   next@"^15.5.10" from the root project
+npm error
+npm error Conflicting peer dependency: react@19.2.4
+npm error node_modules/react
+npm error   peer react@"^18.2.0 || 19.0.0-rc-de68d2f4-20241204 || ^19.0.0" from next@15.5.10
+npm error   node_modules/next
+npm error     next@"^15.5.10" from the root project
+npm error
+npm error Fix the upstream dependency conflict, or retry
+npm error this command with --force or --legacy-peer-deps
+npm error to accept an incorrect (and potentially broken) dependency resolution.
+npm error
+npm error
+npm error For a full report see:
+npm error /Users/bgadmin/.npm/_logs/2026-02-20T15_03_29_646Z-eresolve-report.txt
+npm error A complete log of this run can be found in: /Users/bgadmin/.npm/_logs/2026-02-20T15_03_29_646Z-debug-0.log
+bgadmin@Baudisgroups-MacBook-Air beaconplusWeb % cd ..
+bgadmin@Baudisgroups-MacBook-Air bycon % ./beaconServer/beacon.py -r biosamples -d examplez --testMode true 
+WARNING:bycon:Optional local config /Users/bgadmin/GitHub/bycon/beaconServer/../local/datatable_mappings.yaml not found
+WARNING:bycon:Optional local config /Users/bgadmin/GitHub/bycon/beaconServer/../local/plot_defaults.yaml not found
+INFO:biocommons.seqrepo.fastadir.fastadir:File descriptor caching disabled
+{
+    "meta": {
+        "apiVersion": "v2.2.2-beaconplus",
+        "beaconId": "org.progenetix.bycon",
+        "receivedRequestSummary": {
+            "apiVersion": "v2.2.2-beaconplus",
+            "beaconId": "org.progenetix.bycon",
+            "datasetIds": [
+                "examplez"
+            ],
+            "includeResultsetResponses": "HIT",
+            "pagination": {
+                "limit": 200,
+                "skip": 0
+            },
+            "requestedGranularity": "record",
+            "requestedSchemas": [
+                {
+                    "id": "biosample",
+                    "name": "Default schema for a biological sample",
+                    "referenceToSchemaDefinition": "cli://Baudisgroups-MacBook-Air.local/services/schemas/biosample"
+                }
+            ],
+            "testMode": true
+        },
+        "returnedGranularity": "record",
+        "returnedSchemas": [
+            {
+                "id": "biosample",
+                "name": "Default schema for a biological sample",
+                "referenceToSchemaDefinition": "cli://Baudisgroups-MacBook-Air.local/services/schemas/biosample"
+            }
+        ],
+        "testMode": true
+    },
+    "response": {
+        "resultSets": [
+            {
+                "exists": true,
+                "id": "examplez",
+                "info": {
+                    "counts": {
+                        "analyses": 5,
+                        "biosamples": 5,
+                        "individuals": 5
+                    }
+                },
+                "responseEntityId": "biosample",
+                "results": [
+                    {
+                        "biosampleStatus": {
+                            "id": "EFO:0009656",
+                            "label": "neoplastic sample"
+                        },
+                        "cohorts": [
+                            {
+                                "id": "pgx:cohort-TCGA",
+                                "label": "TCGA samples"
+                            },
+                            {
+                                "id": "pgx:cohort-2021progenetix",
+                                "label": "Version at Progenetix Update 2021"
+                            },
+                            {
+                                "id": "pgx:cohort-TCGAcancers",
+                                "label": "TCGA Cancer samples"
+                            }
+                        ],
+                        "collectionMoment": "P79Y0M14D",
+                        "externalReferences": [
+                            {
+                                "description": "Lung Adenocarcinoma",
+                                "id": "pgx:TCGA-LUAD"
+                            },
+                            {
+                                "description": "Cancer Genome Atlas Research Network. (2014): Comprehensive molecular profiling of lung adenocarcinoma....",
+                                "id": "25079552",
+                                "reference": "https://europepmc.org/article/MED/25079552"
+                            }
+                        ],
+                        "geoLocation": {
+                            "geometry": {
+                                "coordinates": [
+                                    -71.11,
+                                    42.38
+                                ],
+                                "type": "Point"
+                            },
+                            "properties": {
+                                "ISO3166alpha3": "USA",
+                                "city": "Cambridge",
+                                "continent": "North America",
+                                "country": "United States of America",
+                                "label": null,
+                                "latitude": 42.38,
+                                "longitude": -71.11,
+                                "precision": "city"
+                            },
+                            "type": "Feature"
+                        },
+                        "histologicalDiagnosis": {
+                            "id": "NCIT:C3512",
+                            "label": "Lung Adenocarcinoma"
+                        },
+                        "icdoMorphology": {
+                            "id": "pgx:icdom-81403",
+                            "label": "Adenocarcinoma, NOS"
+                        },
+                        "icdoTopography": {
+                            "id": "pgx:icdot-C34.1",
+                            "label": "Upper lobe, lung"
+                        },
+                        "id": "pgxbs-kftvhio8",
+                        "individualId": "pgxind-kftx3glz",
+                        "name": "32c4dcd3-8cc1-4a7d-b593-b8d0b7541c1b",
+                        "notes": "Primary Tumor",
+                        "pathologicalStage": {
+                            "id": "NCIT:C27976",
+                            "label": "Stage IB"
+                        },
+                        "pathologicalTnmFindings": [
+                            {
+                                "id": "NCIT:C48725",
+                                "label": "T2a Stage Finding"
+                            },
+                            {
+                                "id": "NCIT:C48705",
+                                "label": "N0 Stage Finding"
+                            },
+                            {
+                                "id": "NCIT:C48699",
+                                "label": "M0 Stage Finding"
+                            }
+                        ],
+                        "sampleOriginDetail": {
+                            "id": "UBERON:0008948",
+                            "label": "upper lobe of lung"
+                        },
+                        "sampleOriginType": {
+                            "id": "OBI:0001479",
+                            "label": "specimen from organism"
+                        },
+                        "updated": "2020-09-10 17:44:47.929000"
+                    },
+                    {
+                        "biosampleStatus": {
+                            "id": "EFO:0009656",
+                            "label": "neoplastic sample"
+                        },
+                        "cohorts": [
+                            {
+                                "id": "pgx:cohort-TCGA",
+                                "label": "TCGA samples"
+                            },
+                            {
+                                "id": "pgx:cohort-2021progenetix",
+                                "label": "Version at Progenetix Update 2021"
+                            },
+                            {
+                                "id": "pgx:cohort-TCGAcancers",
+                                "label": "TCGA Cancer samples"
+                            }
+                        ],
+                        "collectionMoment": "P78Y4M25D",
+                        "externalReferences": [
+                            {
+                                "description": "Head and Neck Squamous Cell Carcinoma",
+                                "id": "pgx:TCGA-HNSC"
+                            },
+                            {
+                                "description": "Cancer Genome Atlas Network. (2015): Comprehensive genomic characterization of head and...",
+                                "id": "25631445",
+                                "reference": "https://europepmc.org/article/MED/25631445"
+                            }
+                        ],
+                        "geoLocation": {
+                            "geometry": {
+                                "coordinates": [
+                                    -79.06,
+                                    35.91
+                                ],
+                                "type": "Point"
+                            },
+                            "properties": {
+                                "ISO3166alpha3": "USA",
+                                "city": "Chapel Hill",
+                                "continent": "North America",
+                                "country": "United States of America",
+                                "label": null,
+                                "latitude": 35.91,
+                                "longitude": -79.06,
+                                "precision": "city"
+                            },
+                            "type": "Feature"
+                        },
+                        "histologicalDiagnosis": {
+                            "id": "NCIT:C4833",
+                            "label": "Oral Cavity Squamous Cell Carcinoma"
+                        },
+                        "icdoMorphology": {
+                            "id": "pgx:icdom-80703",
+                            "label": "Squamous cell carcinoma, NOS"
+                        },
+                        "icdoTopography": {
+                            "id": "pgx:icdot-C06.0",
+                            "label": "Cheek mucosa"
+                        },
+                        "id": "pgxbs-kftvhhpg",
+                        "individualId": "pgxind-kftx3fgd",
+                        "name": "73479b59-8a67-45be-aaa5-8ba6770a6d4c",
+                        "notes": "Primary Tumor",
+                        "pathologicalStage": {
+                            "id": "NCIT:C27970",
+                            "label": "Stage III"
+                        },
+                        "pathologicalTnmFindings": [
+                            {
+                                "id": "NCIT:C48728",
+                                "label": "T3 Stage Finding"
+                            },
+                            {
+                                "id": "NCIT:C48705",
+                                "label": "N0 Stage Finding"
+                            },
+                            {
+                                "id": "NCIT:C48699",
+                                "label": "M0 Stage Finding"
+                            }
+                        ],
+                        "sampleOriginDetail": {
+                            "id": "UBERON:0006956",
+                            "label": "buccal mucosa"
+                        },
+                        "sampleOriginType": {
+                            "id": "OBI:0001479",
+                            "label": "specimen from organism"
+                        },
+                        "updated": "2020-09-10 17:44:46.529000"
+                    },
+                    {
+                        "biosampleStatus": {
+                            "id": "EFO:0009656",
+                            "label": "neoplastic sample"
+                        },
+                        "cohorts": [
+                            {
+                                "id": "pgx:cohort-TCGA",
+                                "label": "TCGA samples"
+                            },
+                            {
+                                "id": "pgx:cohort-2021progenetix",
+                                "label": "Version at Progenetix Update 2021"
+                            },
+                            {
+                                "id": "pgx:cohort-TCGAcancers",
+                                "label": "TCGA Cancer samples"
+                            },
+                            {
+                                "id": "pgx:cohort-carriocordo2021heterogeneity",
+                                "label": "Carrio-Cordo and Baudis - Genomic Heterogeneity in Cancer Types (2021)"
+                            }
+                        ],
+                        "collectionMoment": "P68Y9M14D",
+                        "externalReferences": [
+                            {
+                                "description": "Prostate Adenocarcinoma",
+                                "id": "pgx:TCGA-PRAD"
+                            },
+                            {
+                                "description": "Cancer Genome Atlas Research Network. (2015) The Molecular Taxonomy of Primary Prostate Cancer.",
+                                "id": "26544944",
+                                "reference": "https://europepmc.org/article/MED/26544944"
+                            }
+                        ],
+                        "geoLocation": {
+                            "geometry": {
+                                "coordinates": [
+                                    -77.1,
+                                    38.98
+                                ],
+                                "type": "Point"
+                            },
+                            "properties": {
+                                "ISO3166alpha3": "USA",
+                                "city": "Bethesda",
+                                "continent": "North America",
+                                "country": "United States of America",
+                                "label": null,
+                                "latitude": 38.98,
+                                "longitude": -77.1,
+                                "precision": "city"
+                            },
+                            "type": "Feature"
+                        },
+                        "histologicalDiagnosis": {
+                            "id": "NCIT:C5596",
+                            "label": "Prostate Acinar Adenocarcinoma"
+                        },
+                        "icdoMorphology": {
+                            "id": "pgx:icdom-85503",
+                            "label": "Acinar cell carcinoma"
+                        },
+                        "icdoTopography": {
+                            "id": "pgx:icdot-C61.9",
+                            "label": "Prostate gland"
+                        },
+                        "id": "pgxbs-kftvhilj",
+                        "individualId": "pgxind-kftx3gip",
+                        "name": "a9360ccf-07bc-4c71-80f3-e638b3b88cf0",
+                        "notes": "Primary Tumor",
+                        "pathologicalStage": {
+                            "id": "NCIT:C92207",
+                            "label": "Stage Unknown"
+                        },
+                        "pathologicalTnmFindings": [
+                            {
+                                "id": "NCIT:C48730",
+                                "label": "T3b Stage Finding"
+                            },
+                            {
+                                "id": "NCIT:C48705",
+                                "label": "N0 Stage Finding"
+                            },
+                            {
+                                "id": "NCIT:C48699",
+                                "label": "M0 Stage Finding"
+                            }
+                        ],
+                        "sampleOriginDetail": {
+                            "id": "UBERON:0002367",
+                            "label": "prostate gland"
+                        },
+                        "sampleOriginType": {
+                            "id": "OBI:0001479",
+                            "label": "specimen from organism"
+                        },
+                        "updated": "2020-09-10 17:44:47.847000"
+                    },
+                    {
+                        "biosampleStatus": {
+                            "id": "EFO:0009656",
+                            "label": "neoplastic sample"
+                        },
+                        "cohorts": [
+                            {
+                                "id": "pgx:cohort-TCGA",
+                                "label": "TCGA samples"
+                            },
+                            {
+                                "id": "pgx:cohort-2021progenetix",
+                                "label": "Version at Progenetix Update 2021"
+                            },
+                            {
+                                "id": "pgx:cohort-TCGAcancers",
+                                "label": "TCGA Cancer samples"
+                            }
+                        ],
+                        "collectionMoment": "P51Y6M9D",
+                        "externalReferences": [
+                            {
+                                "description": "Colon Adenocarcinoma",
+                                "id": "pgx:TCGA-COAD"
+                            },
+                            {
+                                "description": "Cancer Genome Atlas Network. (2012): Comprehensive molecular characterization of human colon...",
+                                "id": "22810696",
+                                "reference": "https://europepmc.org/article/MED/22810696"
+                            }
+                        ],
+                        "geoLocation": {
+                            "geometry": {
+                                "coordinates": [
+                                    -89.41,
+                                    40.7
+                                ],
+                                "type": "Point"
+                            },
+                            "properties": {
+                                "ISO3166alpha3": "USA",
+                                "city": "Washington",
+                                "continent": "North America",
+                                "country": "United States of America",
+                                "label": null,
+                                "latitude": 40.7,
+                                "longitude": -89.41,
+                                "precision": "city"
+                            },
+                            "type": "Feature"
+                        },
+                        "histologicalDiagnosis": {
+                            "id": "NCIT:C4349",
+                            "label": "Colon Adenocarcinoma"
+                        },
+                        "icdoMorphology": {
+                            "id": "pgx:icdom-81403",
+                            "label": "Adenocarcinoma, NOS"
+                        },
+                        "icdoTopography": {
+                            "id": "pgx:icdot-C18.0",
+                            "label": "Cecum"
+                        },
+                        "id": "pgxbs-kftvhijy",
+                        "individualId": "pgxind-kftx3ggu",
+                        "name": "faed408c-c7f8-4a40-b7ab-7713129c1211",
+                        "notes": "Primary Tumor",
+                        "pathologicalStage": {
+                            "id": "NCIT:C27966",
+                            "label": "Stage I"
+                        },
+                        "pathologicalTnmFindings": [
+                            {
+                                "id": "NCIT:C48720",
+                                "label": "T1 Stage Finding"
+                            },
+                            {
+                                "id": "NCIT:C48705",
+                                "label": "N0 Stage Finding"
+                            },
+                            {
+                                "id": "NCIT:C48699",
+                                "label": "M0 Stage Finding"
+                            }
+                        ],
+                        "sampleOriginDetail": {
+                            "id": "UBERON:0000314",
+                            "label": "cecum mucosa"
+                        },
+                        "sampleOriginType": {
+                            "id": "OBI:0001479",
+                            "label": "specimen from organism"
+                        },
+                        "updated": "2020-09-10 17:44:47.799000"
+                    },
+                    {
+                        "biosampleStatus": {
+                            "id": "EFO:0009656",
+                            "label": "neoplastic sample"
+                        },
+                        "cohorts": [
+                            {
+                                "id": "pgx:cohort-TCGA",
+                                "label": "TCGA samples"
+                            },
+                            {
+                                "id": "pgx:cohort-2021progenetix",
+                                "label": "Version at Progenetix Update 2021"
+                            },
+                            {
+                                "id": "pgx:cohort-TCGAcancers",
+                                "label": "TCGA Cancer samples"
+                            }
+                        ],
+                        "collectionMoment": "P68Y9M29D",
+                        "externalReferences": [
+                            {
+                                "description": "Acute Myeloid Leukemia",
+                                "id": "pgx:TCGA-LAML"
+                            },
+                            {
+                                "description": "Cancer Genome Atlas Research Network, Ley TJ et al. (2013): Genomic and epigenomic landscapes of adult...",
+                                "id": "23634996",
+                                "reference": "https://europepmc.org/article/MED/23634996"
+                            }
+                        ],
+                        "geoLocation": {
+                            "geometry": {
+                                "coordinates": [
+                                    -89.41,
+                                    40.7
+                                ],
+                                "type": "Point"
+                            },
+                            "properties": {
+                                "ISO3166alpha3": "USA",
+                                "city": "Washington",
+                                "continent": "North America",
+                                "country": "United States of America",
+                                "label": null,
+                                "latitude": 40.7,
+                                "longitude": -89.41,
+                                "precision": "city"
+                            },
+                            "type": "Feature"
+                        },
+                        "histologicalDiagnosis": {
+                            "id": "NCIT:C27753",
+                            "label": "Acute Myeloid Leukemia Not Otherwise Specified"
+                        },
+                        "icdoMorphology": {
+                            "id": "pgx:icdom-98613",
+                            "label": "Acute myeloid leukemia, NOS"
+                        },
+                        "icdoTopography": {
+                            "id": "pgx:icdot-C42.1",
+                            "label": "Bone marrow"
+                        },
+                        "id": "pgxbs-kftvhinx",
+                        "individualId": "pgxind-kftx3gll",
+                        "name": "5df8c374-1022-431d-8680-ca0bee17f808",
+                        "notes": "Primary Blood Derived Cancer - Peripheral Blood",
+                        "pathologicalStage": {
+                            "id": "NCIT:C92207",
+                            "label": "Stage Unknown"
+                        },
+                        "pathologicalTnmFindings": [
+                            {
+                                "id": "NCIT:C48720",
+                                "label": "T1 Stage Finding"
+                            },
+                            {
+                                "id": "NCIT:C48705",
+                                "label": "N0 Stage Finding"
+                            },
+                            {
+                                "id": "NCIT:C48704",
+                                "label": "MX Stage Finding"
+                            }
+                        ],
+                        "sampleOriginDetail": {
+                            "id": "UBERON:0002371",
+                            "label": "bone marrow"
+                        },
+                        "sampleOriginType": {
+                            "id": "OBI:0001479",
+                            "label": "specimen from organism"
+                        },
+                        "updated": "2020-09-10 17:44:47.919000"
+                    }
+                ],
+                "resultsCount": 5,
+                "resultsHandovers": [
+                    {
+                        "handoverType": {
+                            "id": "pgx:HO.histoplot",
+                            "label": "CNV Histogram"
+                        },
+                        "info": {
+                            "contentId": "histoplot",
+                            "count": 5
+                        },
+                        "note": "create a CNV histogram from matched analyses",
+                        "url": "cli://Baudisgroups-MacBook-Air.local/services/sampleplots?datasetIds=examplez&accessid=1c3eec8f-0093-4b8c-ad5f-6d287e070f2a&plotType=histoplot"
+                    },
+                    {
+                        "handoverType": {
+                            "id": "pgx:HO.samplesplot",
+                            "label": "Clustered sample CNV tracks"
+                        },
+                        "info": {
+                            "contentId": "samplesplot",
+                            "count": 5
+                        },
+                        "note": "create CNV plots from matched biosamples",
+                        "url": "cli://Baudisgroups-MacBook-Air.local/services/sampleplots?datasetIds=examplez&accessid=5790ac29-256c-4410-afae-057364cd92eb&plotType=samplesplot"
+                    },
+                    {
+                        "handoverType": {
+                            "id": "pgx:HO.biosamples",
+                            "label": "Biosamples"
+                        },
+                        "info": {
+                            "contentId": "biosamples",
+                            "count": 5
+                        },
+                        "note": "retrieve data of the biosamples matched by the query",
+                        "url": "cli://Baudisgroups-MacBook-Air.local/beacon/biosamples?datasetIds=examplez&accessid=5790ac29-256c-4410-afae-057364cd92eb"
+                    },
+                    {
+                        "handoverType": {
+                            "id": "pgx:HO.biosamplestable",
+                            "label": "Biosamples Table"
+                        },
+                        "info": {
+                            "contentId": "biosamplestable",
+                            "count": 5
+                        },
+                        "note": "retrieve data of the biosamples matched by the query as tab-delimited table",
+                        "url": "cli://Baudisgroups-MacBook-Air.local/services/sampletable?datasetIds=examplez&accessid=5790ac29-256c-4410-afae-057364cd92eb"
+                    },
+                    {
+                        "handoverType": {
+                            "id": "pgx:HO.biosamplesmap",
+                            "label": "Biosamples Map"
+                        },
+                        "info": {
+                            "contentId": "biosamplesmap",
+                            "count": 5
+                        },
+                        "note": "geographic map of the biosamples matched by the query",
+                        "url": "cli://Baudisgroups-MacBook-Air.local/services/sampleglobe?datasetIds=examplez&accessid=5790ac29-256c-4410-afae-057364cd92eb&plotPars=marker_type:circle::marker_scale:20&plotType=map"
+                    },
+                    {
+                        "handoverType": {
+                            "id": "pgx:HO.phenopackets",
+                            "label": "Phenopackets"
+                        },
+                        "info": {
+                            "contentId": "phenopackets",
+                            "count": 5
+                        },
+                        "note": "retrieve data of the phenopackets matched by the query",
+                        "url": "cli://Baudisgroups-MacBook-Air.local/beacon/phenopackets?datasetIds=examplez&accessid=5790ac29-256c-4410-afae-057364cd92eb"
+                    },
+                    {
+                        "handoverType": {
+                            "id": "pgx:HO.individuals",
+                            "label": "Individuals"
+                        },
+                        "info": {
+                            "contentId": "individuals",
+                            "count": 5
+                        },
+                        "note": "retrieve data of the individuals matched by the query",
+                        "url": "cli://Baudisgroups-MacBook-Air.local/beacon/individuals?datasetIds=examplez&accessid=4c664e1e-cd7b-41eb-9185-031a84e8e699"
+                    }
+                ],
+                "setType": "dataset"
+            }
+        ]
+    },
+    "responseSummary": {
+        "exists": true,
+        "numTotalResults": 5
+    }
+}
+
+
+bgadmin@Baudisgroups-MacBook-Air bycon % ./beaconServer/beacon.py -r biosamples -d examplez --testMode true --mode yaml
+WARNING:bycon:Optional local config /Users/bgadmin/GitHub/bycon/beaconServer/../local/datatable_mappings.yaml not found
+WARNING:bycon:Optional local config /Users/bgadmin/GitHub/bycon/beaconServer/../local/plot_defaults.yaml not found
+INFO:biocommons.seqrepo.fastadir.fastadir:File descriptor caching disabled
+meta:
+  apiVersion: v2.2.2-beaconplus
+  beaconId: org.progenetix.bycon
+  receivedRequestSummary:
+    apiVersion: v2.2.2-beaconplus
+    beaconId: org.progenetix.bycon
+    datasetIds:
+    - examplez
+    includeResultsetResponses: HIT
+    pagination:
+      limit: 200
+      skip: 0
+    requestedGranularity: record
+    requestedSchemas:
+    - id: biosample
+      name: Default schema for a biological sample
+      referenceToSchemaDefinition: cli://Baudisgroups-MacBook-Air.local/services/schemas/biosample
+    testMode: true
+  returnedGranularity: record
+  returnedSchemas:
+  - id: biosample
+    name: Default schema for a biological sample
+    referenceToSchemaDefinition: cli://Baudisgroups-MacBook-Air.local/services/schemas/biosample
+  testMode: true
+response:
+  resultSets:
+  - exists: true
+    id: examplez
+    info:
+      counts:
+        analyses: 5
+        biosamples: 5
+        individuals: 5
+    responseEntityId: biosample
+    results:
+    - biosampleStatus:
+        id: EFO:0009656
+        label: neoplastic sample
+      cohorts:
+      - id: pgx:cohort-TCGA
+        label: TCGA samples
+      - id: pgx:cohort-2021progenetix
+        label: Version at Progenetix Update 2021
+      - id: pgx:cohort-TCGAcancers
+        label: TCGA Cancer samples
+      - id: pgx:cohort-carriocordo2021heterogeneity
+        label: Carrio-Cordo and Baudis - Genomic Heterogeneity in Cancer Types (2021)
+      collectionMoment: P54Y5M14D
+      externalReferences:
+      - description: Ovarian Serous Adenocarcinoma
+        id: pgx:TCGA-OV
+      - description: Cancer Genome Atlas Research Network. (2011) Integrated genomic
+          analyses of ovarian carcinoma.
+        id: '21720365'
+        reference: https://europepmc.org/article/MED/21720365
+      geoLocation:
+        geometry:
+          coordinates:
+          - -122.27
+          - 37.87
+          type: Point
+        properties:
+          ISO3166alpha3: USA
+          city: Berkeley
+          continent: North America
+          country: United States of America
+          label: Berkeley, United States, North America
+          latitude: 37.87
+          longitude: -122.27
+          precision: city
+        type: Feature
+      histologicalDiagnosis:
+        id: NCIT:C7978
+        label: Ovarian Serous Cystadenocarcinoma
+      icdoMorphology:
+        id: pgx:icdom-84413
+        label: Serous cystadenocarcinoma, NOS
+      icdoTopography:
+        id: pgx:icdot-C56.9
+        label: Ovary
+      id: pgxbs-kftvhiol
+      individualId: pgxind-kftx3gmf
+      name: 53a563ba-4896-4064-abc4-5470a0ceb80c
+      notes: Primary Tumor
+      pathologicalStage:
+        id: NCIT:C92207
+        label: Stage Unknown
+      pathologicalTnmFindings:
+      - id: NCIT:C48724
+        label: T2 Stage Finding
+      - id: NCIT:C48705
+        label: N0 Stage Finding
+      - id: NCIT:C48699
+        label: M0 Stage Finding
+      sampleOriginDetail:
+        id: UBERON:0000992
+        label: ovary
+      sampleOriginType:
+        id: OBI:0001479
+        label: specimen from organism
+      updated: 2020-09-10 17:44:47.940000
+    - biosampleStatus:
+        id: EFO:0009656
+        label: neoplastic sample
+      cohorts:
+      - id: pgx:cohort-TCGA
+        label: TCGA samples
+      - id: pgx:cohort-2021progenetix
+        label: Version at Progenetix Update 2021
+      - id: pgx:cohort-TCGAcancers
+        label: TCGA Cancer samples
+      collectionMoment: P59Y2M22D
+      externalReferences:
+      - description: Hepatocellular Carcinoma
+        id: pgx:TCGA-LIHC
+      - description: 'Cancer Genome Atlas Research Network. Electronic address: wheeler@bcm.edu,
+          Cancer Genome Atlas Research Network. (2017): Comprehensive and Integrative
+          Genomic Characterization of...'
+        id: '28622513'
+        reference: https://europepmc.org/article/MED/28622513
+      geoLocation:
+        geometry:
+          coordinates:
+          - -95.36
+          - 29.76
+          type: Point
+        properties:
+          ISO3166alpha3: USA
+          city: Houston
+          continent: North America
+          country: United States of America
+          label: null
+          latitude: 29.76
+          longitude: -95.36
+          precision: city
+        type: Feature
+      histologicalDiagnosis:
+        id: NCIT:C3099
+        label: Hepatocellular Carcinoma
+      icdoMorphology:
+        id: pgx:icdom-81703
+        label: Hepatocellular carcinoma, NOS
+      icdoTopography:
+        id: pgx:icdot-C22.0
+        label: Liver
+      id: pgxbs-kftvhil6
+      individualId: pgxind-kftx3gib
+      name: c8c067a3-f48a-4b5d-bf4c-0e1530618f1b
+      notes: Primary Tumor
+      pathologicalStage:
+        id: NCIT:C92207
+        label: Stage Unknown
+      pathologicalTnmFindings:
+      - id: NCIT:C48720
+        label: T1 Stage Finding
+      - id: NCIT:C48718
+        label: NX Stage Finding
+      - id: NCIT:C48704
+        label: MX Stage Finding
+      sampleOriginDetail:
+        id: UBERON:0002107
+        label: liver
+      sampleOriginType:
+        id: OBI:0001479
+        label: specimen from organism
+      updated: 2020-09-10 17:44:47.836000
+    - biosampleStatus:
+        id: EFO:0009656
+        label: neoplastic sample
+      cohorts:
+      - id: pgx:cohort-TCGA
+        label: TCGA samples
+      - id: pgx:cohort-2021progenetix
+        label: Version at Progenetix Update 2021
+      - id: pgx:cohort-TCGAcancers
+        label: TCGA Cancer samples
+      - id: pgx:cohort-carriocordo2021heterogeneity
+        label: Carrio-Cordo and Baudis - Genomic Heterogeneity in Cancer Types (2021)
+      collectionMoment: P55Y9M0D
+      externalReferences:
+      - description: Prostate Adenocarcinoma
+        id: pgx:TCGA-PRAD
+      - description: Cancer Genome Atlas Research Network. (2015) The Molecular Taxonomy
+          of Primary Prostate Cancer.
+        id: '26544944'
+        reference: https://europepmc.org/article/MED/26544944
+      geoLocation:
+        geometry:
+          coordinates:
+          - -77.1
+          - 38.98
+          type: Point
+        properties:
+          ISO3166alpha3: USA
+          city: Bethesda
+          continent: North America
+          country: United States of America
+          label: null
+          latitude: 38.98
+          longitude: -77.1
+          precision: city
+        type: Feature
+      histologicalDiagnosis:
+        id: NCIT:C5596
+        label: Prostate Acinar Adenocarcinoma
+      icdoMorphology:
+        id: pgx:icdom-85503
+        label: Acinar cell carcinoma
+      icdoTopography:
+        id: pgx:icdot-C61.9
+        label: Prostate gland
+      id: pgxbs-kftvhilo
+      individualId: pgxind-kftx3giv
+      name: e2359111-b056-4676-a8b6-c5cea259b478
+      notes: Primary Tumor
+      pathologicalStage:
+        id: NCIT:C92207
+        label: Stage Unknown
+      pathologicalTnmFindings:
+      - id: NCIT:C48729
+        label: T3a Stage Finding
+      - id: NCIT:C48705
+        label: N0 Stage Finding
+      - id: NCIT:C48699
+        label: M0 Stage Finding
+      sampleOriginDetail:
+        id: UBERON:0002367
+        label: prostate gland
+      sampleOriginType:
+        id: OBI:0001479
+        label: specimen from organism
+      updated: 2020-09-10 17:44:47.851000
+    - biosampleStatus:
+        id: EFO:0009656
+        label: neoplastic sample
+      cohorts:
+      - id: pgx:cohort-TCGA
+        label: TCGA samples
+      - id: pgx:cohort-2021progenetix
+        label: Version at Progenetix Update 2021
+      - id: pgx:cohort-TCGAcancers
+        label: TCGA Cancer samples
+      - id: pgx:cohort-carriocordo2021heterogeneity
+        label: Carrio-Cordo and Baudis - Genomic Heterogeneity in Cancer Types (2021)
+      collectionMoment: P59Y5M8D
+      externalReferences:
+      - description: Paraganglioma and Pheochromocytoma
+        id: pgx:TCGA-PCPG
+      - description: 'Fishbein L, Leshchiner I et al. (2017): Comprehensive Molecular
+          Characterization of Pheochromocytoma and...'
+        id: '28162975'
+        reference: https://europepmc.org/article/MED/28162975
+      geoLocation:
+        geometry:
+          coordinates:
+          - -71.11
+          - 42.38
+          type: Point
+        properties:
+          ISO3166alpha3: USA
+          city: Cambridge
+          continent: North America
+          country: United States of America
+          label: null
+          latitude: 42.38
+          longitude: -71.11
+          precision: city
+        type: Feature
+      histologicalDiagnosis:
+        id: NCIT:C3326
+        label: Adrenal Gland Pheochromocytoma
+      icdoMorphology:
+        id: pgx:icdom-87000
+        label: Pheochromocytoma, NOS
+      icdoTopography:
+        id: pgx:icdot-C74.9
+        label: Adrenal gland, NOS
+      id: pgxbs-kftvhin0
+      individualId: pgxind-kftx3gkh
+      name: 1c07233c-211f-4a57-b547-27b13f5eb83d
+      notes: Primary Tumor
+      pathologicalStage:
+        id: NCIT:C92207
+        label: Stage Unknown
+      pathologicalTnmFindings:
+      - id: NCIT:C48728
+        label: T3 Stage Finding
+      - id: NCIT:C48706
+        label: N1 Stage Finding
+      - id: NCIT:C48699
+        label: M0 Stage Finding
+      sampleOriginDetail:
+        id: UBERON:0002369
+        label: adrenal gland
+      sampleOriginType:
+        id: OBI:0001479
+        label: specimen from organism
+      updated: 2020-09-10 17:44:47.891000
+    - biosampleStatus:
+        id: EFO:0009656
+        label: neoplastic sample
+      cohorts:
+      - id: pgx:cohort-TCGA
+        label: TCGA samples
+      - id: pgx:cohort-2021progenetix
+        label: Version at Progenetix Update 2021
+      - id: pgx:cohort-TCGAcancers
+        label: TCGA Cancer samples
+      - id: pgx:cohort-carriocordo2021heterogeneity
+        label: Carrio-Cordo and Baudis - Genomic Heterogeneity in Cancer Types (2021)
+      collectionMoment: P56Y10M23D
+      externalReferences:
+      - description: Hepatocellular Carcinoma
+        id: pgx:TCGA-LIHC
+      - description: 'Cancer Genome Atlas Research Network. Electronic address: wheeler@bcm.edu,
+          Cancer Genome Atlas Research Network. (2017): Comprehensive and Integrative
+          Genomic Characterization of...'
+        id: '28622513'
+        reference: https://europepmc.org/article/MED/28622513
+      geoLocation:
+        geometry:
+          coordinates:
+          - -95.36
+          - 29.76
+          type: Point
+        properties:
+          ISO3166alpha3: USA
+          city: Houston
+          continent: North America
+          country: United States of America
+          label: null
+          latitude: 29.76
+          longitude: -95.36
+          precision: city
+        type: Feature
+      histologicalDiagnosis:
+        id: NCIT:C3099
+        label: Hepatocellular Carcinoma
+      icdoMorphology:
+        id: pgx:icdom-81703
+        label: Hepatocellular carcinoma, NOS
+      icdoTopography:
+        id: pgx:icdot-C22.0
+        label: Liver
+      id: pgxbs-kftvhibi
+      individualId: pgxind-kftx3g6t
+      name: 4282039e-396b-44d8-b4ec-ac14c46ddef6
+      notes: Primary Tumor
+      pathologicalStage:
+        id: NCIT:C27966
+        label: Stage I
+      pathologicalTnmFindings:
+      - id: NCIT:C48720
+        label: T1 Stage Finding
+      - id: NCIT:C48705
+        label: N0 Stage Finding
+      - id: NCIT:C48699
+        label: M0 Stage Finding
+      sampleOriginDetail:
+        id: UBERON:0002107
+        label: liver
+      sampleOriginType:
+        id: OBI:0001479
+        label: specimen from organism
+      updated: 2020-09-10 17:44:47.540000
+    resultsCount: 5
+    resultsHandovers:
+    - handoverType:
+        id: pgx:HO.histoplot
+        label: CNV Histogram
+      info:
+        contentId: histoplot
+        count: 5
+      note: create a CNV histogram from matched analyses
+      url: cli://Baudisgroups-MacBook-Air.local/services/sampleplots?datasetIds=examplez&accessid=fbd3a9c3-d507-4e5a-bb2e-24371869423e&plotType=histoplot
+    - handoverType:
+        id: pgx:HO.samplesplot
+        label: Clustered sample CNV tracks
+      info:
+        contentId: samplesplot
+        count: 5
+      note: create CNV plots from matched biosamples
+      url: cli://Baudisgroups-MacBook-Air.local/services/sampleplots?datasetIds=examplez&accessid=5aca738f-f27a-47bc-af81-3ecddebf356d&plotType=samplesplot
+    - handoverType:
+        id: pgx:HO.biosamples
+        label: Biosamples
+      info:
+        contentId: biosamples
+        count: 5
+      note: retrieve data of the biosamples matched by the query
+      url: cli://Baudisgroups-MacBook-Air.local/beacon/biosamples?datasetIds=examplez&accessid=5aca738f-f27a-47bc-af81-3ecddebf356d
+    - handoverType:
+        id: pgx:HO.biosamplestable
+        label: Biosamples Table
+      info:
+        contentId: biosamplestable
+        count: 5
+      note: retrieve data of the biosamples matched by the query as tab-delimited
+        table
+      url: cli://Baudisgroups-MacBook-Air.local/services/sampletable?datasetIds=examplez&accessid=5aca738f-f27a-47bc-af81-3ecddebf356d
+    - handoverType:
+        id: pgx:HO.biosamplesmap
+        label: Biosamples Map
+      info:
+        contentId: biosamplesmap
+        count: 5
+      note: geographic map of the biosamples matched by the query
+      url: cli://Baudisgroups-MacBook-Air.local/services/sampleglobe?datasetIds=examplez&accessid=5aca738f-f27a-47bc-af81-3ecddebf356d&plotPars=marker_type:circle::marker_scale:20&plotType=map
+    - handoverType:
+        id: pgx:HO.phenopackets
+        label: Phenopackets
+      info:
+        contentId: phenopackets
+        count: 5
+      note: retrieve data of the phenopackets matched by the query
+      url: cli://Baudisgroups-MacBook-Air.local/beacon/phenopackets?datasetIds=examplez&accessid=5aca738f-f27a-47bc-af81-3ecddebf356d
+    - handoverType:
+        id: pgx:HO.individuals
+        label: Individuals
+      info:
+        contentId: individuals
+        count: 5
+      note: retrieve data of the individuals matched by the query
+      url: cli://Baudisgroups-MacBook-Air.local/beacon/individuals?datasetIds=examplez&accessid=876a1fb9-40ce-4e19-8260-ab1aad698514
+    setType: dataset
+responseSummary:
+  exists: true
+  numTotalResults: 5
+
+
+bgadmin@Baudisgroups-MacBook-Air bycon % ./beaconServer/beacon.py -r biosamples -d examplez --testMode true            
+WARNING:bycon:Optional local config /Users/bgadmin/GitHub/bycon/beaconServer/../local/datatable_mappings.yaml not found
+WARNING:bycon:Optional local config /Users/bgadmin/GitHub/bycon/beaconServer/../local/plot_defaults.yaml not found
+INFO:biocommons.seqrepo.fastadir.fastadir:File descriptor caching disabled
+{
+    "meta": {
+        "apiVersion": "v2.2.2-beaconplus",
+        "beaconId": "org.progenetix.bycon",
+        "receivedRequestSummary": {
+            "apiVersion": "v2.2.2-beaconplus",
+            "beaconId": "org.progenetix.bycon",
+            "datasetIds": [
+                "examplez"
+            ],
+            "includeResultsetResponses": "HIT",
+            "pagination": {
+                "limit": 200,
+                "skip": 0
+            },
+            "requestedGranularity": "record",
+            "requestedSchemas": [
+                {
+                    "id": "biosample",
+                    "name": "Default schema for a biological sample",
+                    "referenceToSchemaDefinition": "cli://Baudisgroups-MacBook-Air.local/services/schemas/biosample"
+                }
+            ],
+            "testMode": true
+        },
+        "returnedGranularity": "record",
+        "returnedSchemas": [
+            {
+                "id": "biosample",
+                "name": "Default schema for a biological sample",
+                "referenceToSchemaDefinition": "cli://Baudisgroups-MacBook-Air.local/services/schemas/biosample"
+            }
+        ],
+        "testMode": true
+    },
+    "response": {
+        "resultSets": [
+            {
+                "exists": true,
+                "id": "examplez",
+                "info": {
+                    "counts": {
+                        "analyses": 5,
+                        "biosamples": 5,
+                        "individuals": 5
+                    }
+                },
+                "responseEntityId": "biosample",
+                "results": [
+                    {
+                        "biosampleStatus": {
+                            "id": "EFO:0009656",
+                            "label": "neoplastic sample"
+                        },
+                        "cohorts": [
+                            {
+                                "id": "pgx:cohort-TCGA",
+                                "label": "TCGA samples"
+                            },
+                            {
+                                "id": "pgx:cohort-2021progenetix",
+                                "label": "Version at Progenetix Update 2021"
+                            },
+                            {
+                                "id": "pgx:cohort-TCGAcancers",
+                                "label": "TCGA Cancer samples"
+                            }
+                        ],
+                        "collectionMoment": "P60Y0M15D",
+                        "externalReferences": [
+                            {
+                                "description": "Lower Grade Glioma",
+                                "id": "pgx:TCGA-LGG"
+                            },
+                            {
+                                "description": "Cancer Genome Atlas Research Network, Brat DJ et al. (2015): Comprehensive, Integrative Genomic Analysis of Diffuse...",
+                                "id": "26061751",
+                                "reference": "https://europepmc.org/article/MED/26061751"
+                            }
+                        ],
+                        "geoLocation": {
+                            "geometry": {
+                                "coordinates": [
+                                    -84.39,
+                                    33.75
+                                ],
+                                "type": "Point"
+                            },
+                            "properties": {
+                                "ISO3166alpha3": "USA",
+                                "city": "Atlanta",
+                                "continent": "North America",
+                                "country": "United States of America",
+                                "label": null,
+                                "latitude": 33.75,
+                                "longitude": -84.39,
+                                "precision": "city"
+                            },
+                            "type": "Feature"
+                        },
+                        "histologicalDiagnosis": {
+                            "id": "NCIT:C6959",
+                            "label": "Anaplastic Oligoastrocytoma"
+                        },
+                        "icdoMorphology": {
+                            "id": "pgx:icdom-94513",
+                            "label": "Oligodendroglioma, anaplastic"
+                        },
+                        "icdoTopography": {
+                            "id": "pgx:icdot-C71.0",
+                            "label": "Cerebrum"
+                        },
+                        "id": "pgxbs-kftvhi43",
+                        "individualId": "pgxind-kftx3fxr",
+                        "name": "242cf713-1c1b-4a2f-8e8e-253fb50cfd7f",
+                        "notes": "Primary Tumor",
+                        "pathologicalStage": {
+                            "id": "NCIT:C92207",
+                            "label": "Stage Unknown"
+                        },
+                        "pathologicalTnmFindings": [
+                            {
+                                "id": "NCIT:C48732",
+                                "label": "T4 Stage Finding"
+                            },
+                            {
+                                "id": "NCIT:C48786",
+                                "label": "N2 Stage Finding"
+                            },
+                            {
+                                "id": "NCIT:C48699",
+                                "label": "M0 Stage Finding"
+                            }
+                        ],
+                        "sampleOriginDetail": {
+                            "id": "UBERON:0001869",
+                            "label": "cerebral hemisphere"
+                        },
+                        "sampleOriginType": {
+                            "id": "OBI:0001479",
+                            "label": "specimen from organism"
+                        },
+                        "updated": "2020-09-10 17:44:46.977000"
+                    },
+                    {
+                        "biosampleStatus": {
+                            "id": "EFO:0009656",
+                            "label": "neoplastic sample"
+                        },
+                        "cohorts": [
+                            {
+                                "id": "pgx:cohort-TCGA",
+                                "label": "TCGA samples"
+                            },
+                            {
+                                "id": "pgx:cohort-2021progenetix",
+                                "label": "Version at Progenetix Update 2021"
+                            },
+                            {
+                                "id": "pgx:cohort-TCGAcancers",
+                                "label": "TCGA Cancer samples"
+                            },
+                            {
+                                "id": "pgx:cohort-carriocordo2021heterogeneity",
+                                "label": "Carrio-Cordo and Baudis - Genomic Heterogeneity in Cancer Types (2021)"
+                            }
+                        ],
+                        "collectionMoment": "P66Y3M27D",
+                        "externalReferences": [
+                            {
+                                "description": "Uterine Corpus Endometrioid Carcinoma",
+                                "id": "pgx:TCGA-UCEC"
+                            },
+                            {
+                                "description": "Cancer Genome Atlas Research Network, Kandoth C et al. (2013): Integrated genomic characterization of endometrial carcinoma....",
+                                "id": "23636398",
+                                "reference": "https://europepmc.org/article/MED/23636398"
+                            }
+                        ],
+                        "geoLocation": {
+                            "geometry": {
+                                "coordinates": [
+                                    -74.01,
+                                    40.71
+                                ],
+                                "type": "Point"
+                            },
+                            "properties": {
+                                "ISO3166alpha3": "USA",
+                                "city": "New York City",
+                                "continent": "North America",
+                                "country": "United States of America",
+                                "label": null,
+                                "latitude": 40.71,
+                                "longitude": -74.01,
+                                "precision": "city"
+                            },
+                            "type": "Feature"
+                        },
+                        "histologicalDiagnosis": {
+                            "id": "NCIT:C6287",
+                            "label": "Endometrial Endometrioid Adenocarcinoma"
+                        },
+                        "icdoMorphology": {
+                            "id": "pgx:icdom-83803",
+                            "label": "Endometrioid adenocarcinoma, NOS"
+                        },
+                        "icdoTopography": {
+                            "id": "pgx:icdot-C54.1",
+                            "label": "Endometrium"
+                        },
+                        "id": "pgxbs-kftvhi74",
+                        "individualId": "pgxind-kftx3g1g",
+                        "name": "1576c6c1-b9f0-4acd-9a75-e5f2d5a4ecc1",
+                        "notes": "Primary Tumor",
+                        "pathologicalStage": {
+                            "id": "NCIT:C92207",
+                            "label": "Stage Unknown"
+                        },
+                        "pathologicalTnmFindings": [
+                            {
+                                "id": "NCIT:C48725",
+                                "label": "T2a Stage Finding"
+                            },
+                            {
+                                "id": "NCIT:C48705",
+                                "label": "N0 Stage Finding"
+                            },
+                            {
+                                "id": "NCIT:C48704",
+                                "label": "MX Stage Finding"
+                            }
+                        ],
+                        "sampleOriginDetail": {
+                            "id": "UBERON:0001295",
+                            "label": "endometrium"
+                        },
+                        "sampleOriginType": {
+                            "id": "OBI:0001479",
+                            "label": "specimen from organism"
+                        },
+                        "updated": "2020-09-10 17:44:47.403000"
+                    },
+                    {
+                        "biosampleStatus": {
+                            "id": "EFO:0009656",
+                            "label": "neoplastic sample"
+                        },
+                        "cohorts": [
+                            {
+                                "id": "pgx:cohort-TCGA",
+                                "label": "TCGA samples"
+                            },
+                            {
+                                "id": "pgx:cohort-2021progenetix",
+                                "label": "Version at Progenetix Update 2021"
+                            },
+                            {
+                                "id": "pgx:cohort-TCGAcancers",
+                                "label": "TCGA Cancer samples"
+                            }
+                        ],
+                        "collectionMoment": "P62Y3M1D",
+                        "externalReferences": [
+                            {
+                                "description": "Lower Grade Glioma",
+                                "id": "pgx:TCGA-LGG"
+                            },
+                            {
+                                "description": "Cancer Genome Atlas Research Network, Brat DJ et al. (2015): Comprehensive, Integrative Genomic Analysis of Diffuse...",
+                                "id": "26061751",
+                                "reference": "https://europepmc.org/article/MED/26061751"
+                            }
+                        ],
+                        "geoLocation": {
+                            "geometry": {
+                                "coordinates": [
+                                    -84.39,
+                                    33.75
+                                ],
+                                "type": "Point"
+                            },
+                            "properties": {
+                                "ISO3166alpha3": "USA",
+                                "city": "Atlanta",
+                                "continent": "North America",
+                                "country": "United States of America",
+                                "label": null,
+                                "latitude": 33.75,
+                                "longitude": -84.39,
+                                "precision": "city"
+                            },
+                            "type": "Feature"
+                        },
+                        "histologicalDiagnosis": {
+                            "id": "NCIT:C60781",
+                            "label": "Astrocytoma"
+                        },
+                        "icdoMorphology": {
+                            "id": "pgx:icdom-94003",
+                            "label": "Astrocytoma, NOS"
+                        },
+                        "icdoTopography": {
+                            "id": "pgx:icdot-C71.0",
+                            "label": "Cerebrum"
+                        },
+                        "id": "pgxbs-kftvhhvj",
+                        "individualId": "pgxind-kftx3fnj",
+                        "name": "50ed72f4-6fd5-4c63-8fd7-5147d11bb649",
+                        "notes": "Primary Tumor",
+                        "pathologicalStage": {
+                            "id": "NCIT:C92207",
+                            "label": "Stage Unknown"
+                        },
+                        "pathologicalTnmFindings": [
+                            {
+                                "id": "NCIT:C48732",
+                                "label": "T4 Stage Finding"
+                            },
+                            {
+                                "id": "NCIT:C48786",
+                                "label": "N2 Stage Finding"
+                            },
+                            {
+                                "id": "NCIT:C48699",
+                                "label": "M0 Stage Finding"
+                            }
+                        ],
+                        "sampleOriginDetail": {
+                            "id": "UBERON:0001869",
+                            "label": "cerebral hemisphere"
+                        },
+                        "sampleOriginType": {
+                            "id": "OBI:0001479",
+                            "label": "specimen from organism"
+                        },
+                        "updated": "2020-09-10 17:44:46.716000"
+                    },
+                    {
+                        "biosampleStatus": {
+                            "id": "EFO:0009656",
+                            "label": "neoplastic sample"
+                        },
+                        "cohorts": [
+                            {
+                                "id": "pgx:cohort-TCGA",
+                                "label": "TCGA samples"
+                            },
+                            {
+                                "id": "pgx:cohort-2021progenetix",
+                                "label": "Version at Progenetix Update 2021"
+                            },
+                            {
+                                "id": "pgx:cohort-TCGAcancers",
+                                "label": "TCGA Cancer samples"
+                            },
+                            {
+                                "id": "pgx:cohort-carriocordo2021heterogeneity",
+                                "label": "Carrio-Cordo and Baudis - Genomic Heterogeneity in Cancer Types (2021)"
+                            }
+                        ],
+                        "collectionMoment": "P65Y6M20D",
+                        "externalReferences": [
+                            {
+                                "description": "Uterine Corpus Endometrioid Carcinoma",
+                                "id": "pgx:TCGA-UCEC"
+                            },
+                            {
+                                "description": "Cancer Genome Atlas Research Network, Kandoth C et al. (2013): Integrated genomic characterization of endometrial carcinoma....",
+                                "id": "23636398",
+                                "reference": "https://europepmc.org/article/MED/23636398"
+                            }
+                        ],
+                        "geoLocation": {
+                            "geometry": {
+                                "coordinates": [
+                                    -74.01,
+                                    40.71
+                                ],
+                                "type": "Point"
+                            },
+                            "properties": {
+                                "ISO3166alpha3": "USA",
+                                "city": "New York City",
+                                "continent": "North America",
+                                "country": "United States of America",
+                                "label": null,
+                                "latitude": 40.71,
+                                "longitude": -74.01,
+                                "precision": "city"
+                            },
+                            "type": "Feature"
+                        },
+                        "histologicalDiagnosis": {
+                            "id": "NCIT:C6287",
+                            "label": "Endometrial Endometrioid Adenocarcinoma"
+                        },
+                        "icdoMorphology": {
+                            "id": "pgx:icdom-83803",
+                            "label": "Endometrioid adenocarcinoma, NOS"
+                        },
+                        "icdoTopography": {
+                            "id": "pgx:icdot-C54.1",
+                            "label": "Endometrium"
+                        },
+                        "id": "pgxbs-kftvhilg",
+                        "individualId": "pgxind-kftx3ffl",
+                        "name": "0959f580-cc84-4702-81b8-d6ef96f5469f",
+                        "notes": "Primary Tumor",
+                        "pathologicalStage": {
+                            "id": "NCIT:C92207",
+                            "label": "Stage Unknown"
+                        },
+                        "sampleOriginDetail": {
+                            "id": "UBERON:0001295",
+                            "label": "endometrium"
+                        },
+                        "sampleOriginType": {
+                            "id": "OBI:0001479",
+                            "label": "specimen from organism"
+                        },
+                        "updated": "2020-09-10 17:44:47.844000"
+                    },
+                    {
+                        "biosampleStatus": {
+                            "id": "EFO:0009656",
+                            "label": "neoplastic sample"
+                        },
+                        "cohorts": [
+                            {
+                                "id": "pgx:cohort-TCGA",
+                                "label": "TCGA samples"
+                            },
+                            {
+                                "id": "pgx:cohort-2021progenetix",
+                                "label": "Version at Progenetix Update 2021"
+                            },
+                            {
+                                "id": "pgx:cohort-TCGAcancers",
+                                "label": "TCGA Cancer samples"
+                            },
+                            {
+                                "id": "pgx:cohort-carriocordo2021heterogeneity",
+                                "label": "Carrio-Cordo and Baudis - Genomic Heterogeneity in Cancer Types (2021)"
+                            }
+                        ],
+                        "collectionMoment": "P75Y0M3D",
+                        "externalReferences": [
+                            {
+                                "description": "Head and Neck Squamous Cell Carcinoma",
+                                "id": "pgx:TCGA-HNSC"
+                            },
+                            {
+                                "description": "Cancer Genome Atlas Network. (2015): Comprehensive genomic characterization of head and...",
+                                "id": "25631445",
+                                "reference": "https://europepmc.org/article/MED/25631445"
+                            }
+                        ],
+                        "geoLocation": {
+                            "geometry": {
+                                "coordinates": [
+                                    -79.06,
+                                    35.91
+                                ],
+                                "type": "Point"
+                            },
+                            "properties": {
+                                "ISO3166alpha3": "USA",
+                                "city": "Chapel Hill",
+                                "continent": "North America",
+                                "country": "United States of America",
+                                "label": null,
+                                "latitude": 35.91,
+                                "longitude": -79.06,
+                                "precision": "city"
+                            },
+                            "type": "Feature"
+                        },
+                        "histologicalDiagnosis": {
+                            "id": "NCIT:C4044",
+                            "label": "Laryngeal Squamous Cell Carcinoma"
+                        },
+                        "icdoMorphology": {
+                            "id": "pgx:icdom-80703",
+                            "label": "Squamous cell carcinoma, NOS"
+                        },
+                        "icdoTopography": {
+                            "id": "pgx:icdot-C32.9",
+                            "label": "Larynx, NOS"
+                        },
+                        "id": "pgxbs-kftvhin5",
+                        "individualId": "pgxind-kftx3gkn",
+                        "name": "f844574a-cb7f-4f66-83d4-ee0ca41a63d1",
+                        "notes": "Primary Tumor",
+                        "pathologicalStage": {
+                            "id": "NCIT:C92207",
+                            "label": "Stage Unknown"
+                        },
+                        "pathologicalTnmFindings": [
+                            {
+                                "id": "NCIT:C48720",
+                                "label": "T1 Stage Finding"
+                            },
+                            {
+                                "id": "NCIT:C48705",
+                                "label": "N0 Stage Finding"
+                            },
+                            {
+                                "id": "NCIT:C48699",
+                                "label": "M0 Stage Finding"
+                            }
+                        ],
+                        "sampleOriginDetail": {
+                            "id": "UBERON:0001737",
+                            "label": "larynx"
+                        },
+                        "sampleOriginType": {
+                            "id": "OBI:0001479",
+                            "label": "specimen from organism"
+                        },
+                        "updated": "2020-09-10 17:44:47.895000"
+                    }
+                ],
+                "resultsCount": 5,
+                "resultsHandovers": [
+                    {
+                        "handoverType": {
+                            "id": "pgx:HO.histoplot",
+                            "label": "CNV Histogram"
+                        },
+                        "info": {
+                            "contentId": "histoplot",
+                            "count": 5
+                        },
+                        "note": "create a CNV histogram from matched analyses",
+                        "url": "cli://Baudisgroups-MacBook-Air.local/services/sampleplots?datasetIds=examplez&accessid=5d626706-ea31-4442-ab0c-776e3baf529b&plotType=histoplot"
+                    },
+                    {
+                        "handoverType": {
+                            "id": "pgx:HO.samplesplot",
+                            "label": "Clustered sample CNV tracks"
+                        },
+                        "info": {
+                            "contentId": "samplesplot",
+                            "count": 5
+                        },
+                        "note": "create CNV plots from matched biosamples",
+                        "url": "cli://Baudisgroups-MacBook-Air.local/services/sampleplots?datasetIds=examplez&accessid=6bb40423-80ad-4478-98e2-d23bec50227a&plotType=samplesplot"
+                    },
+                    {
+                        "handoverType": {
+                            "id": "pgx:HO.biosamples",
+                            "label": "Biosamples"
+                        },
+                        "info": {
+                            "contentId": "biosamples",
+                            "count": 5
+                        },
+                        "note": "retrieve data of the biosamples matched by the query",
+                        "url": "cli://Baudisgroups-MacBook-Air.local/beacon/biosamples?datasetIds=examplez&accessid=6bb40423-80ad-4478-98e2-d23bec50227a"
+                    },
+                    {
+                        "handoverType": {
+                            "id": "pgx:HO.biosamplestable",
+                            "label": "Biosamples Table"
+                        },
+                        "info": {
+                            "contentId": "biosamplestable",
+                            "count": 5
+                        },
+                        "note": "retrieve data of the biosamples matched by the query as tab-delimited table",
+                        "url": "cli://Baudisgroups-MacBook-Air.local/services/sampletable?datasetIds=examplez&accessid=6bb40423-80ad-4478-98e2-d23bec50227a"
+                    },
+                    {
+                        "handoverType": {
+                            "id": "pgx:HO.biosamplesmap",
+                            "label": "Biosamples Map"
+                        },
+                        "info": {
+                            "contentId": "biosamplesmap",
+                            "count": 5
+                        },
+                        "note": "geographic map of the biosamples matched by the query",
+                        "url": "cli://Baudisgroups-MacBook-Air.local/services/sampleglobe?datasetIds=examplez&accessid=6bb40423-80ad-4478-98e2-d23bec50227a&plotPars=marker_type:circle::marker_scale:20&plotType=map"
+                    },
+                    {
+                        "handoverType": {
+                            "id": "pgx:HO.phenopackets",
+                            "label": "Phenopackets"
+                        },
+                        "info": {
+                            "contentId": "phenopackets",
+                            "count": 5
+                        },
+                        "note": "retrieve data of the phenopackets matched by the query",
+                        "url": "cli://Baudisgroups-MacBook-Air.local/beacon/phenopackets?datasetIds=examplez&accessid=6bb40423-80ad-4478-98e2-d23bec50227a"
+                    },
+                    {
+                        "handoverType": {
+                            "id": "pgx:HO.individuals",
+                            "label": "Individuals"
+                        },
+                        "info": {
+                            "contentId": "individuals",
+                            "count": 5
+                        },
+                        "note": "retrieve data of the individuals matched by the query",
+                        "url": "cli://Baudisgroups-MacBook-Air.local/beacon/individuals?datasetIds=examplez&accessid=7c976304-69e3-4d42-891c-030e1c0d8e42"
+                    }
+                ],
+                "setType": "dataset"
+            }
+        ]
+    },
+    "responseSummary": {
+        "exists": true,
+        "numTotalResults": 5
+    }
+}
+
+
+bgadmin@Baudisgroups-MacBook-Air bycon % 
