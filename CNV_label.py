@@ -406,37 +406,56 @@ preds_kbest = bst_kbest.predict(X_test_mi)
 print("Accuracy XGBOOST with SelectKbest", metrics.accuracy_score(y_test, preds_kbest))
 '''
 param_grid = {
-    'n_estimators'  : [200, 300],
-    'max_depth'     : [6, 8],
-    'learning_rate' : [0.1, 0.2]
+    'max_depth'     : [4,5,6],
+    'learning_rate' : [0.01, 0.05, 0.1]
+    # pas de n_estimators ici !
 }
-# → 2 × 2 × 2 = 8 combinaisons × 5 folds = 40 entraînements
 
 xgb = XGBClassifier(
+    n_estimators=1000,       # grand nombre, early stopping va l'ajuster
     objective='multi:softmax',
-    num_class=len(np.unique(y_encoded)), 
+    num_class=len(np.unique(y_encoded)),
     random_state=42,
     n_jobs=-1,
     eval_metric='mlogloss'
 )
 
-
 grid_search = GridSearchCV(
     estimator=xgb,
     param_grid=param_grid,
+    cv=StratifiedKFold(n_splits=3, shuffle=True, random_state=42),
     scoring='accuracy',
     n_jobs=-1,
-    verbose=1   # affiche la progression
+    verbose=1
 )
 
 grid_search.fit(X_train_mi, y_train)
-# Tester le meilleur modèle sur le test set
-best_model = grid_search.best_estimator_
-preds_best = best_model.predict(X_test_mi)
-print(f"Accuracy sur test set : {metrics.accuracy_score(y_test, preds_best):.3f}")
-
 print(f"Meilleurs paramètres : {grid_search.best_params_}")
-print(f"Meilleure accuracy CV : {grid_search.best_score_:.3f}")
+
+# Utiliser les meilleurs paramètres trouvés à l'étape 1
+best_params = grid_search.best_params_
+
+bst_final = XGBClassifier(
+    n_estimators=1000,              # maximum
+    max_depth=best_params['max_depth'],
+    learning_rate=0.1,
+    objective='multi:softmax',
+    num_class=len(np.unique(y_encoded)),
+    random_state=42,
+    n_jobs=-1,
+    eval_metric='mlogloss',
+    early_stopping_rounds=20        # arrête automatiquement
+)
+
+bst_final.fit(
+    X_train_mi, y_train,
+    eval_set=[(X_test_mi, y_test)],
+    verbose=False
+)
+
+print(f"Meilleur n_estimators : {bst_final.best_iteration}")
+print(f"Accuracy finale : {metrics.accuracy_score(y_test, bst_final.predict(X_test_mi)):.3f}")
+
 #====Cross-Validation======
 '''scores_bst_mi = []
 
