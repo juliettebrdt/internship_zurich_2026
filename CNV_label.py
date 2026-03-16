@@ -350,14 +350,14 @@ print("Accuracy Random Forest with SelectKbest +SVD:", metrics.accuracy_score(y_
 
 from xgboost import XGBClassifier
 #===== XGBOOST WITHOUT PCA and split normal ======
-'''bst = XGBClassifier(n_estimators=100, max_depth=6, learning_rate=0.1, objective='multi:softmax',num_class=len(np.unique(y_encoded)),random_state=42,n_jobs=-1,eval_metric='mlogloss' )
+'''bst = XGBClassifier(n_estimators=496, max_depth=5, learning_rate=0.05, objective='multi:softmax',num_class=len(np.unique(y_encoded)),random_state=42,n_jobs=-1,eval_metric='mlogloss' )
 # fit model
 bst.fit(X_train, y_train)
 # make predictions
 preds = bst.predict(X_test)
-print("Accuracy XGBOOST before PCA:", metrics.accuracy_score(y_test, preds))
-'''
+print("Accuracy XGBOOST :", metrics.accuracy_score(y_test, preds))
 
+'''
 #======Cross-Validation======
 '''cv = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
 
@@ -371,7 +371,7 @@ scores_bst = cross_val_score(
 )
 
 print("XGBoost - StratifiedKFold (k=5) :")
-print(f"  Accuracy par fold : {[round(s, 3) for s in scores]}")
+print(f"  Accuracy par fold : {[round(s, 3) for s in scores_bst]}")
 print(f"  Moyenne           : {scores_bst.mean():.3f}")
 print(f"  Ecart-type        : {scores_bst.std():.3f}")'''
 #====== XGBOOST WITH PCA
@@ -398,14 +398,58 @@ bst_dt.fit(X_train_dt, y_train)
 preds_dt = bst_dt.predict(X_test_dt)
 print("Accuracy XGBOOST with DecisionTree:", metrics.accuracy_score(y_test, preds_dt))'''
 #=====XGBOOST with SelectKbest=====
-'''bst_kbest = XGBClassifier(n_estimators=100, max_depth=6, learning_rate=0.1, objective='multi:softmax', num_class=len(np.unique(y_encoded)),random_state=42,n_jobs=-1,eval_metric='mlogloss')
+bst_kbest = XGBClassifier(n_estimators=496, max_depth=5, learning_rate=0.05, objective='multi:softmax', num_class=len(np.unique(y_encoded)),random_state=42,n_jobs=-1,eval_metric='mlogloss')
 # fit model
 bst_kbest.fit(X_train_mi, y_train)
 # make predictions
 preds_kbest = bst_kbest.predict(X_test_mi)
 print("Accuracy XGBOOST with SelectKbest", metrics.accuracy_score(y_test, preds_kbest))
-'''
-param_grid = {
+
+#===== Features importance =====
+importances = bst_kbest.feature_importances_
+print(f"\nNombre de features après MI : {len(importances)}")
+print(f"Somme des importances       : {importances.sum():.3f}")
+
+# --- Visualisation top 20 ---
+indices = np.argsort(importances)[::-1]  # trier du plus au moins important
+plt.figure(figsize=(12, 5))
+plt.bar(range(20), importances[indices[:20]], color='steelblue')
+plt.title("Top 20 features les plus importantes (XGBoost)")
+plt.xlabel("Feature rank")
+plt.ylabel("Importance")
+plt.tight_layout()
+plt.show()
+
+for i in range(20):
+    pos_in_mi    = indices[i]               # position dans X_train_mi
+    pos_original = selected_features[pos_in_mi]  # position dans X original (12424)
+    # Déterminer quel canal CNV et quelle position
+    taille_canal = X_filtered.shape[1] // 4  # 12424 / 4 = 3106 bins par canal
+    canal_idx    = pos_original // taille_canal
+    bin_idx      = pos_original % taille_canal
+    canaux       = ['cnv_dup', 'cnv_del', 'cnv_hldup', 'cnv_hldel']
+    print(f"  Rank {i+1:2d} : {canaux[canal_idx]} bin {bin_idx:4d} → importance {importances[pos_in_mi]:.4f}")
+
+#Utiliser feature_importances_ pour filtrer encore plus les features
+# Garder seulement celles avec importance > moyenne
+
+importance_threshold = np.mean(importances)
+best_features_idx = np.where(importances > importance_threshold)[0]
+
+# Reconstruire X avec ces features
+X_train_imp = X_train_mi[:, best_features_idx]
+X_test_imp  = X_test_mi[:, best_features_idx]
+
+print(f"\nAprès Mutual Info       : {X_train_mi.shape[1]} features")
+print(f"Après feature_importances_ : {X_train_imp.shape[1]} features")
+# Réentraîner avec ces features réduites
+xgb_improved = XGBClassifier(n_estimators=496, max_depth=5, learning_rate=0.05, objective='multi:softmax', num_class=len(np.unique(y_encoded)),random_state=42,n_jobs=-1,eval_metric='mlogloss')
+xgb_improved.fit(X_train_imp, y_train)
+preds_imp = xgb_improved.predict(X_test_imp)
+#print(f"\nAccuracy après MI seul            : {metrics.accuracy_score(y_test, preds):.3f}")
+print(f"Accuracy après MI + importances   : {metrics.accuracy_score(y_test, preds_imp):.3f}")
+
+'''param_grid = {
     'max_depth'     : [4,5,6],
     'learning_rate' : [0.01, 0.05, 0.1]
     # pas de n_estimators ici !
@@ -454,34 +498,82 @@ bst_final.fit(
 )
 
 print(f"Meilleur n_estimators : {bst_final.best_iteration}")
-print(f"Accuracy finale : {metrics.accuracy_score(y_test, bst_final.predict(X_test_mi)):.3f}")
+print(f"Accuracy finale : {metrics.accuracy_score(y_test, bst_final.predict(X_test_mi)):.3f}")'''
 
 #====Cross-Validation======
-'''scores_bst_mi = []
-
+'''scores_mi_correct = []
+cv = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
 for train_idx, test_idx in cv.split(X_filtered, y_encoded):
-    # 1. Séparer train et test pour ce fold
     X_train_fold = X_filtered[train_idx]
     X_test_fold  = X_filtered[test_idx]
     y_train_fold = y_encoded[train_idx]
     y_test_fold  = y_encoded[test_idx]
 
-    # 2. Sélection sur train UNIQUEMENT
-    # fit_transform sur train → calcule les scores MI sur train seulement
-    # transform sur test → applique la même sélection sans recalculer
-    selector = SelectKBest(mutual_info_classif, k=500)
-    X_train_sel = selector.fit_transform(X_train_fold, y_train_fold)
-    X_test_sel  = selector.transform(X_test_fold)
+    # Recalculer MI sur train_fold UNIQUEMENT
+    mi_fold = mutual_info_classif(X_train_fold, y_train_fold)
+    threshold_fold = np.mean(mi_fold)
+    selected = np.where(mi_fold > threshold_fold)[0]
 
-    # 3. Entraînement sur train
-    bst_fold = XGBClassifier(n_estimators=100, max_depth=6, learning_rate=0.1, objective='multi:softmax', num_class=len(np.unique(y_encoded)),random_state=42,n_jobs=-1,eval_metric='mlogloss')
-    bst_fold.fit(X_train_sel, y_train_fold)
+    X_train_sel = X_train_fold[:, selected]
+    X_test_sel  = X_test_fold[:, selected]
 
-    # 4. Évaluation sur test
-    score = metrics.accuracy_score(y_test_fold, bst_fold.predict(X_test_sel))
-    scores_bst_mi.append(score)
+    xgb_fold = XGBClassifier(
+        n_estimators=496, max_depth=5, learning_rate=0.05,
+        objective='multi:softmax',
+        num_class=len(np.unique(y_encoded)),
+        random_state=42, n_jobs=-1, eval_metric='mlogloss'
+    )
+    xgb_fold.fit(X_train_sel, y_train_fold)
+    score = metrics.accuracy_score(y_test_fold, xgb_fold.predict(X_test_sel))
+    scores_mi_correct.append(score)
 
-scores_bst_mi = np.array(scores_bst_mi)'''
+scores_mi_correct = np.array(scores_mi_correct)
+print(f"Accuracy par fold : {[round(s, 3) for s in scores_mi_correct]}")
+print(f"Moyenne           : {scores_mi_correct.mean():.3f}")
+print(f"Ecart-type        : {scores_mi_correct.std():.3f}")'''
+scores_final = []
+cv = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
+
+for train_idx, test_idx in cv.split(X_filtered, y_encoded):
+
+    X_train_fold = X_filtered[train_idx]
+    X_test_fold  = X_filtered[test_idx]
+    y_train_fold = y_encoded[train_idx]
+    y_test_fold  = y_encoded[test_idx]
+
+    # 1. Mutual Info sur train UNIQUEMENT
+    mi_fold     = mutual_info_classif(X_train_fold, y_train_fold)
+    thresh_fold = np.mean(mi_fold)
+    sel_fold    = np.where(mi_fold > thresh_fold)[0]
+
+    X_train_sel = X_train_fold[:, sel_fold]
+    X_test_sel  = X_test_fold[:, sel_fold]
+
+    # 2. Premier XGBoost pour obtenir les importances
+    xgb_fold = XGBClassifier(n_estimators=496, max_depth=5, learning_rate=0.05, objective='multi:softmax', num_class=len(np.unique(y_encoded)),random_state=42,n_jobs=-1,eval_metric='mlogloss')
+    xgb_fold.fit(X_train_sel, y_train_fold)
+
+    # 3. Filtrer avec feature_importances_
+    imp_fold  = xgb_fold.feature_importances_
+    thresh_imp = np.mean(imp_fold)
+    best_idx  = np.where(imp_fold > thresh_imp)[0]
+
+    # 4. Appliquer best_idx sur TRAIN ET TEST
+    X_train_best = X_train_sel[:, best_idx]  # ← même best_idx
+    X_test_best  = X_test_sel[:, best_idx]   # ← même best_idx
+
+    # 5. Réentraîner sur les meilleures features
+    xgb_best = XGBClassifier(n_estimators=496, max_depth=5, learning_rate=0.05, objective='multi:softmax', num_class=len(np.unique(y_encoded)),random_state=42,n_jobs=-1,eval_metric='mlogloss')
+    xgb_best.fit(X_train_best, y_train_fold)
+
+    score = metrics.accuracy_score(y_test_fold, xgb_best.predict(X_test_best))
+    scores_final.append(score)
+scores_final = np.array(scores_final)
+
+print("XGBoost - CV avec Mutual Info + feature_importances_ :")
+print(f"  Accuracy par fold : {[round(s, 3) for s in scores_final]}")
+print(f"  Moyenne           : {scores_final.mean():.3f}")
+print(f"  Ecart-type        : {scores_final.std():.3f}")
 #=====SelectKBest + SVD=====
 ''''bst_kbest_svd = XGBClassifier(n_estimators=100, max_depth=6, learning_rate=0.1, objective='multi:softmax', num_class=len(np.unique(y_encoded)),random_state=42,n_jobs=-1,eval_metric='mlogloss')
 # fit model
