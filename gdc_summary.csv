@@ -1,0 +1,67 @@
+project_id,project_name,n_cases_total,data_type,n_files,data_format,platform,available_gdc
+TCGA-LGG,Brain Lower Grade Glioma,516,RNA-seq,534,TSV,Illumina,True
+TCGA-LGG,Brain Lower Grade Glioma,516,Methylation,534,TXT,Illumina Human Methylation 450,True
+TCGA-BRCA,Breast Invasive Carcinoma,1098,RNA-seq,1231,TSV,Illumina,True
+TCGA-BRCA,Breast Invasive Carcinoma,1098,Methylation,1238,TXT,Illumina Human Methylation 27,True
+TCGA-LAML,Acute Myeloid Leukemia,200,RNA-seq,151,TSV,Illumina,True
+TCGA-LAML,Acute Myeloid Leukemia,200,Methylation,388,TXT,Illumina Human Methylation 450,True
+TCGA-UCS,Uterine Carcinosarcoma,57,RNA-seq,57,TSV,Illumina,True
+TCGA-UCS,Uterine Carcinosarcoma,57,Methylation,57,TXT,Illumina Human Methylation 450,True
+TCGA-GBM,Glioblastoma Multiforme,617,RNA-seq,391,TSV,,True
+TCGA-GBM,Glioblastoma Multiforme,617,Methylation,450,TXT,Illumina Human Methylation 450,True
+TCGA-THYM,Thymoma,124,RNA-seq,122,TSV,Illumina,True
+TCGA-THYM,Thymoma,124,Methylation,126,TXT,Illumina Human Methylation 450,True
+TCGA-TGCT,Testicular Germ Cell Tumors,263,RNA-seq,156,TSV,Illumina,True
+TCGA-TGCT,Testicular Germ Cell Tumors,263,Methylation,156,TXT,Illumina Human Methylation 450,True
+TCGA-PCPG,Pheochromocytoma and Paraganglioma,179,RNA-seq,187,TSV,Illumina,True
+TCGA-PCPG,Pheochromocytoma and Paraganglioma,179,Methylation,187,TXT,Illumina Human Methylation 450,True
+TCGA-CHOL,Cholangiocarcinoma,51,RNA-seq,44,TSV,Illumina,True
+TCGA-CHOL,Cholangiocarcinoma,51,Methylation,45,TXT,Illumina Human Methylation 450,True
+TCGA-DLBC,Lymphoid Neoplasm Diffuse Large B-cell Lymphoma,58,RNA-seq,48,TSV,Illumina,True
+TCGA-DLBC,Lymphoid Neoplasm Diffuse Large B-cell Lymphoma,58,Methylation,48,TXT,Illumina Human Methylation 450,True
+TCGA-CESC,Cervical Squamous Cell Carcinoma and Endocervical Adenocarcinoma,307,RNA-seq,309,TSV,Illumina,True
+TCGA-CESC,Cervical Squamous Cell Carcinoma and Endocervical Adenocarcinoma,307,Methylation,312,TXT,Illumina Human Methylation 450,True
+TCGA-ESCA,Esophageal Carcinoma,185,RNA-seq,198,TSV,Illumina,True
+TCGA-ESCA,Esophageal Carcinoma,185,Methylation,202,TXT,Illumina Human Methylation 450,True
+TCGA-ACC,Adrenocortical Carcinoma,92,RNA-seq,79,TSV,Illumina,True
+TCGA-ACC,Adrenocortical Carcinoma,92,Methylation,80,TXT,Illumina Human Methylation 450,True
+TCGA-KICH,Kidney Chromophobe,113,RNA-seq,91,TSV,Illumina,True
+TCGA-KICH,Kidney Chromophobe,113,Methylation,66,TXT,Illumina Human Methylation 450,True
+TCGA-HNSC,Head and Neck Squamous Cell Carcinoma,528,RNA-seq,566,TSV,Illumina,True
+TCGA-HNSC,Head and Neck Squamous Cell Carcinoma,528,Methylation,580,TXT,Illumina Human Methylation 450,True
+TCGA-READ,Rectum Adenocarcinoma,172,RNA-seq,177,TSV,Illumina,True
+TCGA-READ,Rectum Adenocarcinoma,172,Methylation,179,TXT,Illumina Human Methylation 450,True
+TCGA-COAD,Colon Adenocarcinoma,461,RNA-seq,524,TSV,Illumina,True
+TCGA-COAD,Colon Adenocarcinoma,461,Methylation,555,TXT,Illumina Human Methylation 450,True
+TCGA-BLCA,Bladder Urothelial Carcinoma,412,RNA-seq,431,TSV,Illumina,True
+TCGA-BLCA,Bladder Urothelial Carcinoma,412,Methylation,440,TXT,Illumina Human Methylation 450,True
+TCGA-LIHC,Liver Hepatocellular Carcinoma,377,RNA-seq,424,TSV,Illumina,True
+TCGA-LIHC,Liver Hepatocellular Carcinoma,377,Methylation,430,TXT,Illumina Human Methylation 450,True
+TCGA-MESO,Mesothelioma,87,RNA-seq,87,TSV,Illumina,True
+TCGA-MESO,Mesothelioma,87,Methylation,87,TXT,Illumina Human Methylation 450,True
+TCGA-KIRP,Kidney Renal Papillary Cell Carcinoma,291,RNA-seq,323,TSV,Illumina,True
+TCGA-KIRP,Kidney Renal Papillary Cell Carcinoma,291,Methylation,342,TXT,Illumina Human Methylation 450,True
+TCGA-SKCM,Skin Cutaneous Melanoma,470,RNA-seq,473,TSV,Illumina,True
+TCGA-SKCM,Skin Cutaneous Melanoma,470,Methylation,475,TXT,Illumina Human Methylation 450,True
+TCGA-SARC,Sarcoma,261,RNA-seq,265,TSV,Illumina,True
+TCGA-SARC,Sarcoma,261,Methylation,269,TXT,Illumina Human Methylation 450,True
+TCGA-LUAD,Lung Adenocarcinoma,585,RNA-seq,601,TSV,Illumina,True
+TCGA-LUAD,Lung Adenocarcinoma,585,Methylation,710,TXT,Illumina Human Methylation 450,True
+TCGA-PRAD,Prostate Adenocarcinoma,500,RNA-seq,554,TSV,Illumina,True
+TCGA-PRAD,Prostate Adenocarcinoma,500,Methylation,553,TXT,Illumina Human Methylation 450,True
+TCGA-LUSC,Lung Squamous Cell Carcinoma,504,RNA-seq,562,TSV,Illumina,True
+TCGA-LUSC,Lung Squamous Cell Carcinoma,504,Methylation,573,TXT,Illumina Human Methylation 27,True
+TCGA-PAAD,Pancreatic Adenocarcinoma,185,RNA-seq,183,TSV,Illumina,True
+TCGA-PAAD,Pancreatic Adenocarcinoma,185,Methylation,195,TXT,Illumina Human Methylation 450,True
+TCGA-UVM,Uveal Melanoma,80,RNA-seq,80,TSV,Illumina,True
+TCGA-UVM,Uveal Melanoma,80,Methylation,80,TXT,Illumina Human Methylation 450,True
+TCGA-KIRC,Kidney Renal Clear Cell Carcinoma,537,RNA-seq,614,TSV,Illumina,True
+TCGA-KIRC,Kidney Renal Clear Cell Carcinoma,537,Methylation,903,TXT,Illumina Human Methylation 27,True
+TCGA-THCA,Thyroid Carcinoma,507,RNA-seq,572,TSV,Illumina,True
+TCGA-THCA,Thyroid Carcinoma,507,Methylation,571,TXT,Illumina Human Methylation 450,True
+TCGA-OV,Ovarian Serous Cystadenocarcinoma,608,RNA-seq,434,TSV,Illumina,True
+TCGA-OV,Ovarian Serous Cystadenocarcinoma,608,Methylation,623,TXT,Illumina Human Methylation 27,True
+TCGA-UCEC,Uterine Corpus Endometrial Carcinoma,560,RNA-seq,589,TSV,Illumina,True
+TCGA-UCEC,Uterine Corpus Endometrial Carcinoma,560,Methylation,603,TXT,Illumina Human Methylation 450,True
+TCGA-STAD,Stomach Adenocarcinoma,443,RNA-seq,448,TSV,Illumina,True
+TCGA-STAD,Stomach Adenocarcinoma,443,Methylation,470,TXT,Illumina Human Methylation 450,True
