@@ -1,1 +1,6 @@
 CNV_Label.csv
+cohort_matrices/
+cohort_matrices_cleaned/
+cbioportal_data/
+cohort_methylation_matrices/
+progenetix_cnv/
