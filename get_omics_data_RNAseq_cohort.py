@@ -25,7 +25,7 @@ log = logging.getLogger(__name__)
 # ── Configuration ─────────────────────────────────────────────────
 GDC_FILES_ENDPOINT = "https://api.gdc.cancer.gov/files"
 GDC_DATA_ENDPOINT  = "https://api.gdc.cancer.gov/data"
-OUTPUT_DIR         = Path("cohort_matrices")
+OUTPUT_DIR         = Path("cohort_matrices_2")
 PAGE_SIZE          = 500   # files per pagination request
 SLEEP_BETWEEN      = 0.2   # seconds between file downloads
 
@@ -158,12 +158,9 @@ def get_all_files_for_cohort(project_id: str) -> list[dict]:
 
 # ----- DOWNLOAD ONE FILE AND PARSE IT ------
 
+# ----- DOWNLOAD ONE FILE AND PARSE IT ------
+
 def download_and_parse(file_id: str, sample_id: str) -> pd.DataFrame | None:
-    """
-    Download one STAR - Counts file from GDC and return it as a
-    two-column DataFrame: gene_id | sample_id.
-    Filters out STAR summary rows (N_unmapped, N_multimapping, etc.).
-    """
     try:
         r = requests.post(
             GDC_DATA_ENDPOINT,
@@ -172,17 +169,51 @@ def download_and_parse(file_id: str, sample_id: str) -> pd.DataFrame | None:
         )
         r.raise_for_status()
 
-        content = r.content.decode("utf-8")
-        df = pd.read_csv(io.StringIO(content), sep="\t", comment="#")
+        raw_text = r.content.decode("utf-8")
+        lines = raw_text.splitlines()
 
-        # Keep only the first two columns: gene_id + unstranded counts
-        df = df.iloc[:, :2].copy()
-        df.columns = ["gene_id", sample_id]
+        # Trouver la ligne de header (commence par "gene_id")
+        header_idx = next(
+            (i for i, l in enumerate(lines) if l.startswith("gene_id")),
+            None
+        )
+        if header_idx is None:
+            log.warning(f"  No header found in {file_id}")
+            return None
 
-        # Remove STAR summary rows (not actual genes)
-        df = df[~df["gene_id"].str.startswith("N_")]
+        df = pd.read_csv(
+            io.StringIO("\n".join(lines[header_idx:])),
+            sep="\t"
+        )
 
-        return df
+        # Supprimer les lignes résumé STAR (N_unmapped, etc.)
+        df = df[~df["gene_id"].str.startswith("N_")].copy()
+
+        # ── Choisir la colonne de valeur ──────────────────────────
+        if "tpm_unstranded" in df.columns:
+            value_col = "tpm_unstranded"
+        elif "unstranded" in df.columns:
+            value_col = "unstranded"
+        else:
+            log.warning(f"  No usable count column in {file_id}: {df.columns.tolist()}")
+            return None
+
+        # Garder gene_id (sans version) + valeur
+        result = df[["gene_id", value_col]].copy()
+        result["gene_id"] = result["gene_id"].str.split(".").str[0]  # ENSG00000001234.15 → ENSG00000001234
+        
+        # Conversion numérique immédiate (gain de temps et de mémoire)
+        result[value_col] = pd.to_numeric(result[value_col], errors="coerce")
+
+        # ── SÉCURITÉ DOUBLONS : Fusionner les gènes des zones pseudo-autosomales (PAR) ──
+        result = result.groupby("gene_id")[value_col].mean().to_frame()
+        result = result.rename(columns={value_col: sample_id})
+
+        # Vérification
+        nonzero = (result[sample_id] > 0).sum()
+        log.info(f"    {sample_id}: {nonzero:,} expressed genes / {len(result):,} total")
+
+        return result
 
     except Exception as e:
         log.warning(f"    Failed to download {file_id}: {e}")
@@ -192,13 +223,8 @@ def download_and_parse(file_id: str, sample_id: str) -> pd.DataFrame | None:
 # ---- BUILD MATRIX FOR ONE COHORT------
 
 def build_cohort_matrix(project_id: str, file_list: list[dict]) -> None:
-    """
-    Download all files for a cohort and concatenate them into
-    a single gene × samples matrix saved as CSV.
-    """
     output_file = OUTPUT_DIR / f"{project_id}_STAR_counts_matrix.csv"
 
-    # Resume support: skip if already done
     if output_file.exists():
         log.info(f"  ⏭️  {project_id} already downloaded — skipping.")
         return
@@ -209,30 +235,22 @@ def build_cohort_matrix(project_id: str, file_list: list[dict]) -> None:
 
     for i, item in enumerate(file_list, 1):
         log.info(f"    [{i}/{len(file_list)}] {item['sample_id']}")
-
         df = download_and_parse(item["file_id"], item["sample_id"])
-
         if df is not None:
-            # Set gene_id as index for efficient concat later
-            df = df.set_index("gene_id")
             sample_series.append(df)
-
         time.sleep(SLEEP_BETWEEN)
 
     if not sample_series:
         log.warning(f"  No data retrieved for {project_id}.")
         return
 
-    # ── Build matrix efficiently with a single pd.concat ──────────
+    # ── Un seul bloc de construction propre qui préserve les NaNs ──
     log.info(f"  Building matrix ({len(sample_series)} samples)...")
-    matrix = pd.concat(sample_series, axis=1)   # genes × samples
-    matrix = matrix.apply(pd.to_numeric, errors='coerce').fillna(0).astype(int)
+    matrix = pd.concat(sample_series, axis=1)
 
     matrix.to_csv(output_file)
-    log.info(f"  ✅ Saved: {output_file}  "
-             f"({matrix.shape[0]} genes × {matrix.shape[1]} samples)")
-
-
+    log.info(f"  ✅ Saved: {output_file} "
+             f"({matrix.shape[0]:,} genes × {matrix.shape[1]:,} samples)")
 
 
 def run():

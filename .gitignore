@@ -1,6 +1,32 @@
-CNV_Label.csv
-cohort_matrices/
-cohort_matrices_cleaned/
+# OS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+
+# Virtual environments
+venv/
+venv_omics/
+
+# Data files - raw/intermediate data, never versioned
+*.csv
+*.parquet
+*.pkl
+*.log
+*.txt
+*.html
+
+# Keep small result summary tables
+!cancer_statistics.csv
+!cancer_vs_cohort_table.csv
+
+# Data directories
+cohort_matrices*/
 cbioportal_data/
+cbioportal_cleaned/
 cohort_methylation_matrices/
 progenetix_cnv/
+
+# Misc
+output.png

@@ -34,12 +34,12 @@ ILLUMINA_MANIFEST = Path(
 # wget https://ftp.ncbi.nlm.nih.gov/gene/DATA/GENE_INFO/Mammalia/Homo_sapiens.gene_info.gz
 NCBI_GENE_INFO = Path("/Users/bgadmin/Downloads/Homo_sapiens.gene_info")
 
-GDC_RNA_INPUT    = Path("cohort_matrices")
+GDC_RNA_INPUT    = Path("cohort_matrices_2")
 GDC_METH_INPUT   = Path("cohort_methylation_matrices")
-CBIO_BASE_INPUT  = Path("cbioportal_data")
+#CBIO_BASE_INPUT  = Path("cbioportal_data")
 
 GDC_OUTPUT       = Path("cohort_matrices_cleaned")
-CBIO_BASE_OUTPUT = Path("cbioportal_cleaned")
+#CBIO_BASE_OUTPUT = Path("cbioportal_cleaned")
 
 # ─────────────────────────────────────────────────────────────
 # LOAD GENE PANEL
@@ -385,7 +385,7 @@ def run():
 
     probe_dict = get_or_create_probe_mapping(symbols)
 
-    for folder in [GDC_OUTPUT, CBIO_BASE_OUTPUT]:
+    for folder in [GDC_OUTPUT]:
         if folder.exists():
             shutil.rmtree(folder)
 
@@ -406,7 +406,7 @@ def run():
             )
 
     # STEP 2 : cBioPortal
-    log.info("\n" + "=" * 55 + "\nSTEP 2 : cBioPortal\n" + "=" * 55)
+    '''log.info("\n" + "=" * 55 + "\nSTEP 2 : cBioPortal\n" + "=" * 55)
     for omic in ["rnaseq", "methylation"]:
         src = CBIO_BASE_INPUT / omic
         if not src.exists():
@@ -418,7 +418,7 @@ def run():
                 CBIO_BASE_OUTPUT / omic / f"{f.stem}_clean.csv",
                 "cBioPortal",
                 probe_dict if omic == "methylation" else None,
-            )
+            )'''
 
     log.info("\n✅ TERMINÉ")
 

@@ -51,6 +51,7 @@ METADATA_FILE  = "all_progenetix_metadata.csv"
 CNV_FILE       = Path("progenetix_cnv/GLOBAL_cnv_gene_panel.csv")
 CNV_BRIDGE     = Path("cnv_id_bridge.csv")
 
+
 GDC_RNA_DIR    = Path("cohort_matrices_cleaned/rnaseq/")
 CBIO_RNA_DIR   = Path("cbioportal_cleaned/rnaseq/")
 GDC_METH_DIR   = Path("cohort_matrices_cleaned/methylation/")
@@ -443,7 +444,7 @@ def run():
         log.info(f"  GDC RNA ready: {df_gdc_rna.shape[0]:,} samples × {df_gdc_rna.shape[1]:,} genes")
 
     df_cbio_rna = concatenate_matrices(CBIO_RNA_DIR, "*.csv", "cBio RNA",
-                                       valid_ids=valid_cbio_ids)
+                                       valid_ids=None)
     if df_cbio_rna is not None:
         log.info(f"  cBio RNA ready: {df_cbio_rna.shape[0]:,} samples × {df_cbio_rna.shape[1]:,} genes")
 
@@ -459,7 +460,7 @@ def run():
         log.info(f"  GDC Meth ready: {df_gdc_meth.shape[0]:,} samples × {df_gdc_meth.shape[1]:,} probes")
 
     df_cbio_meth = concatenate_matrices(CBIO_METH_DIR, "*.csv", "cBio Meth",
-                                        valid_ids=valid_cbio_ids)
+                                        valid_ids=None)
     if df_cbio_meth is not None:
         log.info(f"  cBio Meth ready: {df_cbio_meth.shape[0]:,} samples × {df_cbio_meth.shape[1]:,} probes")
 
@@ -467,8 +468,41 @@ def run():
     log.info("\n" + "=" * 55)
     log.info("STEP 4 — CNV")
     log.info("=" * 55)
+    def load_cnv_four_fractions(cnv_file: Path) -> pd.DataFrame:
+        log.info(f"Loading CNV with 4 fractions from {cnv_file}...")
 
-    df_cnv = concatenate_matrices(CNV_FILE, "**/*.csv", "CNV")
+        df = pd.read_csv(
+            cnv_file,
+            sep="\t" if str(cnv_file).endswith(".tsv") else ",",
+            dtype={"analysis_id": str, "gene_symbol": str,
+                "dup_frac": float, "del_frac": float,
+                "hldup_frac": float, "hldel_frac": float},
+            low_memory=False
+        )
+        log.info(f"  Raw panel: {len(df):,} rows | "
+                f"{df['analysis_id'].nunique():,} analyses | "
+                f"{df['gene_symbol'].nunique():,} genes")
+
+        frames = []
+        for col in ["dup_frac", "del_frac", "hldup_frac", "hldel_frac"]:
+            suffix = col.replace("_frac", "")
+            piv = df.pivot_table(
+                index="analysis_id",
+                columns="gene_symbol",
+                values=col,
+                aggfunc="mean"
+            )
+            # Pas de préfixe cnv_ ici — merge_cnv() l'ajoute lui-même
+            piv.columns = [f"{g}__{suffix}" for g in piv.columns]
+            piv.columns.name = None
+            frames.append(piv)
+
+        wide = pd.concat(frames, axis=1).fillna(0.0)
+        log.info(f"  CNV wide: {wide.shape[0]:,} samples × {wide.shape[1]:,} features "
+                f"({wide.shape[1]//4} genes × 4 fractions)")
+        return wide
+    df_cnv = load_cnv_four_fractions(CNV_FILE)
+
 
     # ── Step 5: Final join ────────────────────────────────────────
     # Chaque source est mergée séparément avec son propre préfixe.

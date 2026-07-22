@@ -1,0 +1,183 @@
+histological_diagnosis_label,n_samples,n_patients,samples_per_patient,pct_cnv,pct_rna,pct_meth
+Ductal Breast Carcinoma,717,712,1.01,1.0,1.0,1.0
+Squamous Cell Lung Carcinoma,447,447,1.0,1.0,1.0,1.0
+Endometrial Endometrioid Adenocarcinoma,378,377,1.0,1.0,1.0,1.0
+Clear Cell Renal Cell Carcinoma,355,354,1.0,1.0,1.0,1.0
+Hepatocellular Carcinoma,350,348,1.01,1.0,1.0,1.0
+Thyroid Gland Papillary Carcinoma,340,333,1.02,1.0,1.0,1.0
+Bladder Urothelial Carcinoma,331,331,1.0,1.0,1.0,1.0
+Non-Cutaneous Melanoma,304,304,1.0,1.0,1.0,1.0
+Lung Adenocarcinoma,303,303,1.0,1.0,1.0,1.0
+Prostate Adenocarcinoma,293,292,1.0,1.0,1.0,1.0
+Papillary Renal Cell Carcinoma,276,276,1.0,1.0,1.0,1.0
+Ovarian Serous Cystadenocarcinoma,263,263,1.0,1.0,1.0,1.0
+Colon Adenocarcinoma,254,254,1.0,1.0,1.0,1.0
+Glioblastoma,211,205,1.03,1.0,1.0,1.0
+Prostate Acinar Adenocarcinoma,188,188,1.0,1.0,1.0,1.0
+Rectosigmoid Adenocarcinoma,158,155,1.02,1.0,1.0,1.0
+Gastric Adenocarcinoma,157,157,1.0,1.0,1.0,1.0
+"Cervical Squamous Cell Carcinoma, Not Otherwise Specified",152,151,1.01,1.0,1.0,1.0
+Lobular Breast Carcinoma,151,150,1.01,1.0,1.0,1.0
+Pancreatic Ductal Adenocarcinoma,132,132,1.0,1.0,1.0,1.0
+Mixed Glioma,131,127,1.03,1.0,1.0,1.0
+Anaplastic Astrocytoma,129,128,1.01,1.0,1.0,1.0
+Tongue Squamous Cell Carcinoma,119,119,1.0,1.0,1.0,1.0
+Lung Adenocarcinoma with Mixed Bronchioloalveolar and Invasive Components,116,114,1.02,1.0,1.0,1.0
+Serous Cystadenocarcinoma,114,114,1.0,1.0,1.0,1.0
+Cutaneous Melanoma,113,113,1.0,1.0,1.0,1.0
+Adrenal Gland Pheochromocytoma,110,109,1.01,1.0,1.0,1.0
+Oligodendroglioma,109,106,1.03,1.0,1.0,1.0
+Squamous Cell Carcinoma,106,104,1.02,1.0,1.0,1.0
+Follicular Variant Thyroid Gland Papillary Carcinoma,103,103,1.0,1.0,1.0,1.0
+Laryngeal Squamous Cell Carcinoma,97,97,1.0,1.0,1.0,1.0
+Keratinizing Squamous Cell Carcinoma,93,93,1.0,1.0,1.0,1.0
+Esophageal Squamous Cell Carcinoma,89,88,1.01,1.0,1.0,1.0
+Esophageal Adenocarcinoma,85,85,1.0,1.0,1.0,1.0
+Gastric Intestinal Type Adenocarcinoma,78,78,1.0,1.0,1.0,1.0
+Adrenal Cortex Carcinoma,72,72,1.0,1.0,1.0,1.0
+Gastric tubular adenocarcinoma,72,72,1.0,1.0,1.0,1.0
+Anaplastic Oligoastrocytoma,71,68,1.04,1.0,1.0,1.0
+Chromophobe Renal Cell Carcinoma,66,66,1.0,1.0,1.0,1.0
+Astrocytoma,64,63,1.02,1.0,1.0,1.0
+Bladder Papillary Urothelial Carcinoma,63,63,1.0,1.0,1.0,1.0
+Leiomyosarcoma,63,63,1.0,1.0,1.0,1.0
+Diffuse Gastric Adenocarcinoma,62,62,1.0,1.0,1.0,1.0
+Seminoma,62,60,1.03,1.0,1.0,1.0
+Non-Keratinizing Large Cell Squamous Cell Carcinoma,61,61,1.0,1.0,1.0,1.0
+Rectal Adenocarcinoma,60,60,1.0,1.0,1.0,1.0
+Acute Myeloid Leukemia Not Otherwise Specified,60,60,1.0,1.0,1.0,1.0
+Epithelioid Mesothelioma,53,53,1.0,1.0,1.0,1.0
+Colon Mucinous Adenocarcinoma,52,52,1.0,1.0,1.0,1.0
+B Lymphoblastic Leukemia/Lymphoma,47,47,1.0,1.0,1.0,1.0
+Dedifferentiated Liposarcoma,47,47,1.0,1.0,1.0,1.0
+Diffuse Large B-Cell Lymphoma,47,47,1.0,1.0,1.0,1.0
+Floor of Mouth Squamous Cell Carcinoma,46,45,1.02,1.0,1.0,1.0
+Mixed Mesodermal (Mullerian) Tumor,45,45,1.0,1.0,1.0,1.0
+Malignant Adrenal Gland Pheochromocytoma,41,39,1.05,1.0,1.0,1.0
+Mixed Epithelioid and Spindle Cell Melanoma,38,38,1.0,1.0,1.0,1.0
+Columnar Cell Variant Thyroid Gland Papillary Carcinoma,34,34,1.0,1.0,1.0,1.0
+Undifferentiated (Embryonal) Sarcoma,33,32,1.03,1.0,1.0,1.0
+Oral Cavity Squamous Cell Carcinoma,31,31,1.0,1.0,1.0,1.0
+Mucinous Adenocarcinoma,31,31,1.0,1.0,1.0,1.0
+Intrahepatic Cholangiocarcinoma,30,30,1.0,1.0,1.0,1.0
+Malignant Type AB Thymoma,27,27,1.0,1.0,1.0,1.0
+Embryonal Carcinoma,26,25,1.04,1.0,1.0,1.0
+Mixed Germ Cell Tumor,25,24,1.04,1.0,1.0,1.0
+Invasive Ductal and Invasive Lobular Breast Carcinoma,25,25,1.0,1.0,1.0,1.0
+Breast Adenocarcinoma,25,25,1.0,1.0,1.0,1.0
+Malignant Type B2 Thymoma,25,25,1.0,1.0,1.0,1.0
+Papillary Adenocarcinoma,24,24,1.0,1.0,1.0,1.0
+Acinar Lung Adenocarcinoma,24,24,1.0,1.0,1.0,1.0
+Basaloid Squamous Cell Carcinoma,24,24,1.0,1.0,1.0,1.0
+Uterine Corpus Leiomyosarcoma,24,23,1.04,1.0,1.0,1.0
+Myxofibrosarcoma,23,23,1.0,1.0,1.0,1.0
+Spindle Cell Melanoma,23,23,1.0,1.0,1.0,1.0
+Nodular Melanoma,22,21,1.05,1.0,1.0,1.0
+Epithelioid Cell Melanoma,20,20,1.0,1.0,1.0,1.0
+Pancreatic Adenocarcinoma,19,18,1.06,1.0,1.0,1.0
+"Endocervical Adenocarcinoma, Usual-Type",19,19,1.0,1.0,1.0,1.0
+Non-Mucinous Minimally Invasive Lung Adenocarcinoma,18,18,1.0,1.0,1.0,1.0
+Pleural biphasic mesothelioma,18,18,1.0,1.0,1.0,1.0
+Mucinous Gastric Adenocarcinoma,18,18,1.0,1.0,1.0,1.0
+Extra-Adrenal Paraganglioma,18,18,1.0,1.0,1.0,1.0
+"Cervical Mucinous Adenocarcinoma, Not Otherwise Specified",16,16,1.0,1.0,1.0,1.0
+Signet Ring Cell Carcinoma,16,16,1.0,1.0,1.0,1.0
+Renal Cell Carcinoma,14,14,1.0,1.0,1.0,1.0
+Malignant Type A Thymoma,14,14,1.0,1.0,1.0,1.0
+Rectosigmoid Mucinous Adenocarcinoma,13,13,1.0,1.0,1.0,1.0
+Undifferentiated Pleomorphic Sarcoma,13,13,1.0,1.0,1.0,1.0
+Metaplastic Breast Carcinoma,12,12,1.0,1.0,1.0,1.0
+Thymoma Type B3,12,12,1.0,1.0,1.0,1.0
+Thymic Carcinoma,11,11,1.0,1.0,1.0,1.0
+Malignant Peripheral Nerve Sheath Tumor,10,9,1.11,1.0,1.0,1.0
+Uterine Corpus Carcinosarcoma,10,10,1.0,1.0,1.0,1.0
+Oropharyngeal Squamous Cell Carcinoma,9,9,1.0,1.0,1.0,1.0
+Type B Spindle Cell Melanoma,9,9,1.0,1.0,1.0,1.0
+Malignant Type B1 Thymoma,9,9,1.0,1.0,1.0,1.0
+Cervical Adenocarcinoma,8,8,1.0,1.0,1.0,1.0
+Unspecified Tissue,8,8,1.0,1.0,1.0,1.0
+Pancreatic Neuroendocrine Tumor,8,8,1.0,1.0,1.0,1.0
+Anaplastic Oligodendroglioma,8,8,1.0,1.0,1.0,1.0
+Adenocarcinoma in Tubulovillous Adenoma,7,7,1.0,1.0,1.0,1.0
+Gingival Squamous Cell Carcinoma,7,7,1.0,1.0,1.0,1.0
+Combined Hepatocellular Carcinoma and Cholangiocarcinoma,7,7,1.0,1.0,1.0,1.0
+Thymoma Type AB,7,7,1.0,1.0,1.0,1.0
+Papillary Serous Cystadenocarcinoma,7,7,1.0,1.0,1.0,1.0
+Mature Teratoma,6,5,1.2,1.0,1.0,1.0
+Pleural Malignant Mesothelioma,6,6,1.0,1.0,1.0,1.0
+Malignant Extra-Adrenal Paraganglioma,6,6,1.0,1.0,1.0,1.0
+Tubular Adenocarcinoma,6,6,1.0,1.0,1.0,1.0
+Spindle Cell Synovial Sarcoma,6,6,1.0,1.0,1.0,1.0
+Intraductal Papillary Adenocarcinoma with Invasion,5,5,1.0,1.0,1.0,1.0
+Mucinous Minimally Invasive Lung Adenocarcinoma,5,5,1.0,1.0,1.0,1.0
+Thymoma Type B2,5,5,1.0,1.0,1.0,1.0
+Rectal Mucinous Adenocarcinoma,5,5,1.0,1.0,1.0,1.0
+Medullary Breast Carcinoma,5,5,1.0,1.0,1.0,1.0
+Solid Carcinoma,5,5,1.0,1.0,1.0,1.0
+Thyroid Gland Diffuse Sclerosing Papillary Carcinoma,4,4,1.0,1.0,1.0,1.0
+Papillary Squamous Cell Carcinoma,4,4,1.0,1.0,1.0,1.0
+Superficial Spreading Melanoma,4,4,1.0,1.0,1.0,1.0
+Yolk Sac Tumor,4,4,1.0,1.0,1.0,1.0
+Amelanotic Melanoma,4,4,1.0,1.0,1.0,1.0
+Clear Cell Adenocarcinoma,4,4,1.0,1.0,1.0,1.0
+Fibrolamellar Carcinoma,4,4,1.0,1.0,1.0,1.0
+Extrahepatic Bile Duct Adenocarcinoma,4,4,1.0,1.0,1.0,1.0
+Malignant Paraganglioma,4,2,2.0,1.0,1.0,1.0
+Adenocarcinoma,3,3,1.0,1.0,1.0,1.0
+Bronchioloalveolar Carcinoma,3,3,1.0,1.0,1.0,1.0
+Immature Teratoma,3,3,1.0,1.0,1.0,1.0
+Cervical adenosquamous carcinoma,3,3,1.0,1.0,1.0,1.0
+Paraganglioma,3,3,1.0,1.0,1.0,1.0
+Thymoma Type B1,3,3,1.0,1.0,1.0,1.0
+Acral Lentiginous Melanoma,3,2,1.5,1.0,1.0,1.0
+Palate Squamous Cell Carcinoma,3,3,1.0,1.0,1.0,1.0
+Adrenal Cortex Adenoma,3,3,1.0,1.0,1.0,1.0
+Paget Disease of the Breast,3,3,1.0,1.0,1.0,1.0
+Amelanotic melanoma,3,3,1.0,1.0,1.0,1.0
+Thymoma Type A,3,3,1.0,1.0,1.0,1.0
+"Endometrial Endometrioid Adenocarcinoma, Secretory Variant",2,2,1.0,1.0,1.0,1.0
+Serous Surface Papillary Carcinoma,2,2,1.0,1.0,1.0,1.0
+Biphasic Synovial Sarcoma,2,2,1.0,1.0,1.0,1.0
+Endometrioid Adenocarcinoma,2,2,1.0,1.0,1.0,1.0
+Pleomorphic Liposarcoma,2,2,1.0,1.0,1.0,1.0
+Lentigo Maligna Melanoma,2,2,1.0,1.0,1.0,1.0
+Lower Gingival Squamous Cell Carcinoma,2,2,1.0,1.0,1.0,1.0
+Undifferentiated Carcinoma,2,2,1.0,1.0,1.0,1.0
+Synovial Sarcoma,2,2,1.0,1.0,1.0,1.0
+Mixed Embryonal Carcinoma and Teratoma,2,2,1.0,1.0,1.0,1.0
+Myxoid Leiomyosarcoma,2,2,1.0,1.0,1.0,1.0
+Bladder Carcinoma,1,1,1.0,1.0,1.0,1.0
+Atypical Lipomatous Tumor/Well Differentiated Liposarcoma,1,1,1.0,1.0,1.0,1.0
+Thyroid Gland Carcinoma,1,1,1.0,1.0,1.0,1.0
+Ovarian leiomyosarcoma,1,1,1.0,1.0,1.0,1.0
+Thyroid Gland Follicular Carcinoma,1,1,1.0,1.0,1.0,1.0
+"Thyroid Gland Follicular Carcinoma, Minimally Invasive",1,1,1.0,1.0,1.0,1.0
+Aorticopulmonary Paraganglioma,1,1,1.0,1.0,1.0,1.0
+Tubular Breast Carcinoma,1,1,1.0,1.0,1.0,1.0
+Adenosquamous Carcinoma,1,1,1.0,1.0,1.0,1.0
+Adenoid Cystic Carcinoma,1,1,1.0,1.0,1.0,1.0
+Adenocarcinoma with Neuroendocrine Differentiation,1,1,1.0,1.0,1.0,1.0
+Ureter Carcinoma,1,1,1.0,1.0,1.0,1.0
+Bladder Squamous Cell Carcinoma,1,1,1.0,1.0,1.0,1.0
+Soft Tissue Sarcoma,1,1,1.0,1.0,1.0,1.0
+Breast Carcinoma,1,1,1.0,1.0,1.0,1.0
+Large Cell Neuroendocrine Carcinoma,1,1,1.0,1.0,1.0,1.0
+Ovarian Cystadenocarcinoma,1,1,1.0,1.0,1.0,1.0
+Non-Keratinizing Small Cell Squamous Cell Carcinoma,1,1,1.0,1.0,1.0,1.0
+Papillary Carcinoma,1,1,1.0,1.0,1.0,1.0
+Melanoma,1,1,1.0,1.0,1.0,1.0
+Malignant Breast Phyllodes Tumor,1,1,1.0,1.0,1.0,1.0
+Papillary lung adenocarcinoma,1,1,1.0,1.0,1.0,1.0
+Pleomorphic Carcinoma,1,1,1.0,1.0,1.0,1.0
+Liposarcoma,1,1,1.0,1.0,1.0,1.0
+Invasive Cribriform Breast Carcinoma,1,1,1.0,1.0,1.0,1.0
+Cholangiocarcinoma,1,1,1.0,1.0,1.0,1.0
+Giant Cell Sarcoma,1,1,1.0,1.0,1.0,1.0
+Sarcomatoid Squamous Cell Carcinoma,1,1,1.0,1.0,1.0,1.0
+Endometrial adenocarcinoma,1,1,1.0,1.0,1.0,1.0
+Skin Basal Cell Carcinoma,1,1,1.0,1.0,1.0,1.0
+Oxyphilic Adenocarcinoma,1,1,1.0,1.0,1.0,1.0
+Desmoplastic Mesothelioma,1,1,1.0,1.0,1.0,1.0
+Desmoid-Type Fibromatosis,1,1,1.0,1.0,1.0,1.0
+Spitz Nevus,1,1,1.0,1.0,1.0,1.0
+Abdominal (Mesenteric) Fibromatosis,1,1,1.0,1.0,1.0,1.0

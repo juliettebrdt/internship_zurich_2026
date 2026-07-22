@@ -49,7 +49,7 @@ BIOSAMPLE_COLS = [
 # STEP 1 — Charger et filtrer les biosamples (logique tutrice)
 # ══════════════════════════════════════════════════════════════════
 
-def load_and_filter_biosamples() -> pd.DataFrame:
+def load_and_filter_biosamples() -> tuple[pd.DataFrame, pd.DataFrame]:
     """
     Reproduit exactement la logique de la tutrice + filtre TCGA/cBioPortal.
 
@@ -145,27 +145,13 @@ def load_and_filter_biosamples() -> pd.DataFrame:
         # Stats
         n_tcga = bios_panel["tcgaproject_id"].notna().sum()
         n_cbio = (bios_panel["cbioportal_id"].notna() & bios_panel["tcgaproject_id"].isna()).sum()
-        log.info(f"  TCGA:              {n_tcga} samples")
-        log.info(f"  cBioPortal only:   {n_cbio} samples")
 
-    else:
-        log.error("Column 'cohorts' not found — cannot filter by source")
-        return pd.DataFrame(), pd.DataFrame()
-
-        # ── Stats finales ─────────────────────────────────────────────
-        log.info("\n--- Biosample stats ---")
-        log.info(f"  Total in summary       : {len(bios)}")
-        log.info(f"  With CNV in panel      : {len(bios[bios['analysis_id'].isin(panel_ana_ids)])}")
-        log.info(f"  After platform filter  : voir logs")
-        log.info(f"  TCGA + cBioPortal kept : {len(bios_panel)}")
-
-        if has_tcga:
-            n_tcga = bios_panel["tcgaproject_id"].notna().sum()
-            log.info(f"    TCGA:       {n_tcga}")
-        if has_cbio:
-            n_cbio = bios_panel["cbioportal_id"].notna().sum()
-            log.info(f"    cBioPortal: {n_cbio}")
-
+    log.info("\n" + "="*40 + "\n--- BIOSAMPLE FILTRATION STATS ---")
+    log.info(f"Total entries in raw summary : {len(bios)}")
+    log.info(f"Total matching the CNV Panel : {len(panel_ana_ids)}")
+    log.info(f"Final Cohorts Kept           : {len(bios_panel)}")
+    log.info(f"  -> TCGA Samples            : {n_tcga}")
+    log.info(f"  -> cBioPortal-Only Samples : {n_cbio}\n" + "="*40)
     return bios_panel, gene_panel
 
 
